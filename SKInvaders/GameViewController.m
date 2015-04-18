@@ -13,13 +13,11 @@
 
 @implementation GameViewController
 
-- (void)dealloc
-{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     // Pause the view (and thus the game) when the app is interrupted or backgrounded
@@ -40,36 +38,31 @@
     [skView presentScene:scene];
 }
 
-- (BOOL)shouldAutorotate
-{
+- (BOOL)shouldAutorotate {
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
+- (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)handleApplicationWillResignActive:(NSNotification*)note
-{
+- (void)handleApplicationWillResignActive:(NSNotification*)note {
     ((SKView*)self.view).paused = YES;
 }
 
-- (void)handleApplicationDidBecomeActive:(NSNotification*)note
-{
+- (void)handleApplicationDidBecomeActive:(NSNotification*)note {
     ((SKView*)self.view).paused = NO;
 }
 
-- (void)presentProjectViewController
-{
+- (void)presentProjectViewController {
   [self performSelector:@selector(presentProjectVC) withObject:nil afterDelay:0.3f];
 }
-- (void)presentProjectVC
-{
+
+- (void)presentProjectVC {
   ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PVC"];
   projectViewController.appKey = @"WhatToPack";
-  [self presentViewController:projectViewController animated:NO completion:^{
     
-  }];
+  [self presentViewController:projectViewController animated:NO completion:NULL];
 }
+
 @end

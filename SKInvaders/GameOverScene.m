@@ -15,16 +15,14 @@
 
 @implementation GameOverScene
 
-- (void)didMoveToView:(SKView *)view
-{
+- (void)didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
         [self createContent];
         self.contentCreated = YES;
     }
 }
 
-- (void)createContent
-{
+- (void)createContent {
     SKLabelNode* gameOverLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
     gameOverLabel.fontSize = 50;
     gameOverLabel.fontColor = [SKColor whiteColor];
@@ -40,23 +38,19 @@
     [self addChild:tapLabel];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
 
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     GameScene* gameScene = [[GameScene alloc] initWithSize:self.size];
     gameScene.scaleMode = SKSceneScaleModeAspectFill;
     [self.view presentScene:gameScene transition:[SKTransition doorsCloseHorizontalWithDuration:1.0]];

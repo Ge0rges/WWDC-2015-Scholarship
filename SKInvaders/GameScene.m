@@ -77,8 +77,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Scene Setup and Content Creation
 
-- (void)didMoveToView:(SKView *)view
-{
+- (void)didMoveToView:(SKView *)view {
     if (!self.contentCreated) {
         [self createContent];
         self.contentCreated = YES;
@@ -91,8 +90,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
-- (void)createContent
-{
+- (void)createContent {
     //1
     self.invaderMovementDirection = InvaderMovementDirectionRight;
     //2
@@ -108,7 +106,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self setupHud];
 }
 
--(NSArray*)loadInvaderTexturesOfType:(InvaderType)invaderType {
+- (NSArray*)loadInvaderTexturesOfType:(InvaderType)invaderType {
     NSString* prefix;
     switch (invaderType) {
         case InvaderTypeA:
@@ -127,7 +125,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
              [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@_01.png", prefix]]];
 }
  
--(SKNode*)makeInvaderOfType:(InvaderType)invaderType {
+- (SKNode*)makeInvaderOfType:(InvaderType)invaderType {
     NSArray* invaderTextures = [self loadInvaderTexturesOfType:invaderType];
     //2
     SKSpriteNode* invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
@@ -144,7 +142,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     return invader;
 }
 
--(void)setupInvaders {
+- (void)setupInvaders {
     //1
     CGPoint baseOrigin = CGPointMake(kInvaderSize.width / 2, 180);
     for (NSUInteger row = 0; row < kInvaderRowCount; ++row) {
@@ -169,7 +167,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
--(void)setupShip {
+- (void)setupShip {
     //1
     SKNode* ship = [self makeShip];
     //2
@@ -178,7 +176,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     self.shipHealth = 1.0f;
 }
  
--(SKNode*)makeShip {
+- (SKNode*)makeShip {
     //1
     SKSpriteNode* ship = [SKSpriteNode spriteNodeWithImageNamed:@"Ship.png"];
     ship.name = kShipName;
@@ -196,7 +194,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     return ship;
 }
 
--(void)setupHud {
+- (void)setupHud {
     SKLabelNode* scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
     //1
     scoreLabel.name = kScoreHudName;
@@ -220,7 +218,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self addChild:healthLabel];
 }
 
--(SKNode*)makeBulletOfType:(BulletType)bulletType {
+- (SKNode*)makeBulletOfType:(BulletType)bulletType {
     SKNode* bullet;
  
     switch (bulletType) {
@@ -255,7 +253,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Scene Update
 
--(void)update:(NSTimeInterval)currentTime {
+- (void)update:(NSTimeInterval)currentTime {
     if ([self isGameOver]) [self endGame];
     [self processContactsForUpdate:currentTime];
     [self processUserTapsForUpdate:currentTime];
@@ -267,7 +265,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 #pragma mark - Scene Update Helpers
 
 // This method will get invoked by update:
--(void)moveInvadersForUpdate:(NSTimeInterval)currentTime {
+- (void)moveInvadersForUpdate:(NSTimeInterval)currentTime {
     //1
     if (currentTime - self.timeOfLastMove < self.timePerMove) return;
     [self determineInvaderMovementDirection];
@@ -295,7 +293,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     self.timeOfLastMove = currentTime;
 }
 
--(void)processUserMotionForUpdate:(NSTimeInterval)currentTime {
+- (void)processUserMotionForUpdate:(NSTimeInterval)currentTime {
     //1
     SKSpriteNode* ship = (SKSpriteNode*)[self childNodeWithName:kShipName];
     //2
@@ -308,7 +306,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
--(void)processUserTapsForUpdate:(NSTimeInterval)currentTime {
+- (void)processUserTapsForUpdate:(NSTimeInterval)currentTime {
     //1
     for (NSNumber* tapCount in [self.tapQueue copy]) {
         if ([tapCount unsignedIntegerValue] == 1) {
@@ -320,7 +318,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
--(void)fireInvaderBulletsForUpdate:(NSTimeInterval)currentTime {
+- (void)fireInvaderBulletsForUpdate:(NSTimeInterval)currentTime {
     SKNode* existingBullet = [self childNodeWithName:kInvaderFiredBulletName];
     //1
     if (!existingBullet) {
@@ -345,7 +343,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
--(void)processContactsForUpdate:(NSTimeInterval)currentTime {
+- (void)processContactsForUpdate:(NSTimeInterval)currentTime {
     for (SKPhysicsContact* contact in [self.contactQueue copy]) {
         [self handleContact:contact];
         [self.contactQueue removeObject:contact];
@@ -354,7 +352,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Invader Movement Helpers
 
--(void)determineInvaderMovementDirection {
+- (void)determineInvaderMovementDirection {
     //1
     __block InvaderMovementDirection proposedMovementDirection = self.invaderMovementDirection;
  
@@ -398,7 +396,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }
 }
 
--(void)adjustInvaderMovementToTimePerMove:(NSTimeInterval)newTimePerMove {
+- (void)adjustInvaderMovementToTimePerMove:(NSTimeInterval)newTimePerMove {
     //1
     if (newTimePerMove <= 0) return;
  
@@ -414,7 +412,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Bullet Helpers
 
--(void)fireBullet:(SKNode*)bullet toDestination:(CGPoint)destination withDuration:(NSTimeInterval)duration soundFileName:(NSString*)soundFileName {
+- (void)fireBullet:(SKNode*)bullet toDestination:(CGPoint)destination withDuration:(NSTimeInterval)duration soundFileName:(NSString*)soundFileName {
     //1
     SKAction* bulletAction = [SKAction sequence:@[[SKAction moveTo:destination duration:duration],
                                                   [SKAction waitForDuration:3.0/60.0],
@@ -427,7 +425,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self addChild:bullet];
 }
  
--(void)fireShipBullets {
+- (void)fireShipBullets {
     SKNode* existingBullet = [self childNodeWithName:kShipFiredBulletName];
     //1
     if (!existingBullet) {
@@ -444,32 +442,32 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - User Tap Helpers
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
  
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
  
--(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     // Intentional no-op
 }
  
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch* touch = [touches anyObject];
     if (touch.tapCount == 1) [self.tapQueue addObject:@1];
 }
 
 #pragma mark - HUD Helpers
 
--(void)adjustScoreBy:(NSUInteger)points {
+- (void)adjustScoreBy:(NSUInteger)points {
     self.score += points;
     SKLabelNode* score = (SKLabelNode*)[self childNodeWithName:kScoreHudName];
     score.text = [NSString stringWithFormat:@"Score: %04lu", (unsigned long)self.score];
 }
  
--(void)adjustShipHealthBy:(CGFloat)healthAdjustment {
+- (void)adjustShipHealthBy:(CGFloat)healthAdjustment {
     //1
     self.shipHealth = MAX(self.shipHealth + healthAdjustment, 0);
  
@@ -479,11 +477,11 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Physics Contact Helpers
 
--(void)didBeginContact:(SKPhysicsContact *)contact {
+- (void)didBeginContact:(SKPhysicsContact *)contact {
     [self.contactQueue addObject:contact];
 }
 
--(void)handleContact:(SKPhysicsContact*)contact {
+- (void)handleContact:(SKPhysicsContact*)contact {
     // Ensure you haven't already handled this contact and removed its nodes
     if (!contact.bodyA.node.parent || !contact.bodyB.node.parent) return;
  
@@ -518,7 +516,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Game End Helpers
 
--(BOOL)isGameOver {
+- (BOOL)isGameOver {
     //1
     SKNode* invader = [self childNodeWithName:kInvaderName];
  
@@ -538,7 +536,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     return !invader || invaderTooLow || !ship;
 }
  
--(void)endGame {
+- (void)endGame {
     //1
     if (!self.gameEnding) {
         self.gameEnding = YES;

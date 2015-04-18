@@ -78,9 +78,7 @@
 }
 
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
-  [self dismissViewControllerAnimated:NO completion:^{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-  }];
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

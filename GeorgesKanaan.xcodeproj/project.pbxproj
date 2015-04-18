@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		6A4B80E617E02A45002A234F /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		6A4B80E717E02A45002A234F /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
-		6AD4641A17DE8BB800C19E75 /* SKInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD4641A17DE8BB800C19E75 /* GeorgesKanaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeorgesKanaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD4641D17DE8BB800C19E75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6AD4641F17DE8BB800C19E75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6AD4642117DE8BB800C19E75 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -81,7 +81,7 @@
 		6AD4643717DE8BB800C19E75 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		6AD4643817DE8BB800C19E75 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		6AD4643C17DE8BB800C19E75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6AD4644217DE8BB900C19E75 /* SKInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD4644217DE8BB900C19E75 /* GeorgesKanaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeorgesKanaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD4644317DE8BB900C19E75 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6AD4644B17DE8BB900C19E75 /* SKInvadersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKInvadersTests-Info.plist"; sourceTree = "<group>"; };
 		6AD4644D17DE8BB900C19E75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		6AD4641B17DE8BB800C19E75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AD4641A17DE8BB800C19E75 /* SKInvaders.app */,
-				6AD4644217DE8BB900C19E75 /* SKInvadersTests.xctest */,
+				6AD4641A17DE8BB800C19E75 /* GeorgesKanaan.app */,
+				6AD4644217DE8BB900C19E75 /* GeorgesKanaanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			);
 			name = GeorgesKanaan;
 			productName = SKInvaders;
-			productReference = 6AD4641A17DE8BB800C19E75 /* SKInvaders.app */;
+			productReference = 6AD4641A17DE8BB800C19E75 /* GeorgesKanaan.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6AD4644117DE8BB900C19E75 /* GeorgesKanaanTests */ = {
@@ -318,7 +318,7 @@
 			);
 			name = GeorgesKanaanTests;
 			productName = SKInvadersTests;
-			productReference = 6AD4644217DE8BB900C19E75 /* SKInvadersTests.xctest */;
+			productReference = 6AD4644217DE8BB900C19E75 /* GeorgesKanaanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

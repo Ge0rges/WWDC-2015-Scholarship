@@ -15,12 +15,12 @@ class WebViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
   
   
   @IBAction func didTapCancel(sender: AnyObject) {
     dismissViewControllerAnimated(false, completion: nil)
   }
+    
 }
-

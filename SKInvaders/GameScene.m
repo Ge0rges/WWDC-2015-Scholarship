@@ -106,7 +106,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self setupHud];
 }
 
-- (NSArray*)loadInvaderTexturesOfType:(InvaderType)invaderType {
+- (NSArray *)loadInvaderTexturesOfType:(InvaderType)invaderType {
     NSString* prefix;
     switch (invaderType) {
         case InvaderTypeA:
@@ -125,7 +125,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
              [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@_01.png", prefix]]];
 }
  
-- (SKNode*)makeInvaderOfType:(InvaderType)invaderType {
+- (SKNode *)makeInvaderOfType:(InvaderType)invaderType {
     NSArray* invaderTextures = [self loadInvaderTexturesOfType:invaderType];
     //2
     SKSpriteNode* invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
@@ -176,7 +176,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     self.shipHealth = 1.0f;
 }
  
-- (SKNode*)makeShip {
+- (SKNode *)makeShip {
     //1
     SKSpriteNode* ship = [SKSpriteNode spriteNodeWithImageNamed:@"Ship.png"];
     ship.name = kShipName;
@@ -208,7 +208,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
  
 }
 
-- (SKNode*)makeBulletOfType:(BulletType)bulletType {
+- (SKNode *)makeBulletOfType:(BulletType)bulletType {
     SKNode* bullet;
  
     switch (bulletType) {
@@ -285,9 +285,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (void)processUserMotionForUpdate:(NSTimeInterval)currentTime {
     //1
-    SKSpriteNode* ship = (SKSpriteNode*)[self childNodeWithName:kShipName];
+    SKSpriteNode *ship = (SKSpriteNode*)[self childNodeWithName:kShipName];
     //2
-    CMAccelerometerData* data = self.motionManager.accelerometerData;
+    CMAccelerometerData *data = self.motionManager.accelerometerData;
     //3
     if (fabs(data.acceleration.x) > 0.2) {
       //4 How do you move the ship?
@@ -402,13 +402,13 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #pragma mark - Bullet Helpers
 
-- (void)fireBullet:(SKNode*)bullet toDestination:(CGPoint)destination withDuration:(NSTimeInterval)duration soundFileName:(NSString*)soundFileName {
+- (void)fireBullet:(SKNode *)bullet toDestination:(CGPoint)destination withDuration:(NSTimeInterval)duration soundFileName:(NSString *)soundFileName {
     //1
-    SKAction* bulletAction = [SKAction sequence:@[[SKAction moveTo:destination duration:duration],
+    SKAction *bulletAction = [SKAction sequence:@[[SKAction moveTo:destination duration:duration],
                                                   [SKAction waitForDuration:3.0/60.0],
                                                   [SKAction removeFromParent]]];
     //2
-    SKAction* soundAction  = [SKAction playSoundFileNamed:soundFileName waitForCompletion:YES];
+    SKAction *soundAction  = [SKAction playSoundFileNamed:soundFileName waitForCompletion:YES];
     //3
     [bullet runAction:[SKAction group:@[bulletAction, soundAction]]];
     //4
@@ -453,7 +453,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (void)adjustScoreBy:(NSUInteger)points {
     self.score += points;
-    SKLabelNode* score = (SKLabelNode*)[self childNodeWithName:kScoreHudName];
+    SKLabelNode* score = (SKLabelNode *)[self childNodeWithName:kScoreHudName];
     score.text = [NSString stringWithFormat:@"Score: %04lu", (unsigned long)self.score];
 }
  
@@ -461,7 +461,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     //1
     self.shipHealth = MAX(self.shipHealth + healthAdjustment, 0);
  
-    SKLabelNode* health = (SKLabelNode*)[self childNodeWithName:kHealthHudName];
+    SKLabelNode* health = (SKLabelNode *)[self childNodeWithName:kHealthHudName];
     health.text = [NSString stringWithFormat:@"Health: %.1f%%", self.shipHealth * 100];
 }
 
@@ -471,7 +471,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self.contactQueue addObject:contact];
 }
 
-- (void)handleContact:(SKPhysicsContact*)contact {
+- (void)handleContact:(SKPhysicsContact *)contact {
     // Ensure you haven't already handled this contact and removed its nodes
     if (!contact.bodyA.node.parent || !contact.bodyB.node.parent) return;
  

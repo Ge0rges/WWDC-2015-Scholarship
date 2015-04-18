@@ -45,12 +45,12 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)handleApplicationWillResignActive:(NSNotification*)note {
-    ((SKView*)self.view).paused = YES;
+- (void)handleApplicationWillResignActive:(NSNotification *)note {
+    ((SKView *)self.view).paused = YES;
 }
 
-- (void)handleApplicationDidBecomeActive:(NSNotification*)note {
-    ((SKView*)self.view).paused = NO;
+- (void)handleApplicationDidBecomeActive:(NSNotification *)note {
+    ((SKView *)self.view).paused = NO;
 }
 
 - (void)presentProjectViewController {

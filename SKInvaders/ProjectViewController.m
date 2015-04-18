@@ -60,7 +60,7 @@
 }
 
 #pragma mark - StoreKit
-- (void)showAppSheetForID:(NSString*)appID {
+- (void)showAppSheetForID:(NSString *)appID {
     // Initialize Product View Controller
     SKStoreProductViewController *storeProductViewController = [[SKStoreProductViewController alloc] init];
     

@@ -7,9 +7,8 @@
 //
 
 #import "GameViewController.h"
-#import "GameScene.h"
-
 #import "ProjectViewController.h"
+#import "GameScene.h"
 
 @implementation GameViewController
 
@@ -23,7 +22,7 @@
     // Pause the view (and thus the game) when the app is interrupted or backgrounded
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationDidBecomeActive:)  name:UIApplicationDidBecomeActiveNotification  object:nil];
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentProjectViewController)  name:@"hello"  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentProjectViewController)  name:@"presentProduct"  object:nil];
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;

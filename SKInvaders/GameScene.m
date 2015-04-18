@@ -546,7 +546,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         GameOverScene* gameOverScene = [[GameOverScene alloc] initWithSize:self.size];
       self.paused = YES;
         //[self.view presentScene:gameOverScene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
-      [[NSNotificationCenter defaultCenter] postNotificationName:@"hello" object:nil];
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"presentProduct" object:nil];
     }
 }
 

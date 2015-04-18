@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 RepublicOfApps, LLC. All rights reserved.
 //
 
+#import "WebViewController.swift"
 #import <UIKit/UIKit.h>
 
 @interface PersonalViewController : UIViewController

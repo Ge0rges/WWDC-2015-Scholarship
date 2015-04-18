@@ -29,7 +29,13 @@
 }
 
 - (IBAction)openTwitter:(UIButton *)sender {
+    NSURL *twitterURL = [NSURL URLWithString:@"twitter://user?screen_name=Ge0rges13"];
+    if ([[UIApplication sharedApplication] canOpenURL:twitterURL]) {
+        [[UIApplication sharedApplication] openURL:twitterURL];
+    }
 }
+
 - (IBAction)openGithub:(UIButton *)sender {
 }
+
 @end

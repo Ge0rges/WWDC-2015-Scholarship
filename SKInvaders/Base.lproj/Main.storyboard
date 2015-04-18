@@ -31,7 +31,7 @@
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController id="LVB-YS-i5n" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LVB-YS-i5n" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Nt-7L-Zj6"/>
                         <viewControllerLayoutGuide type="bottom" id="OpK-gG-0Aw"/>

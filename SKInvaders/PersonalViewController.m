@@ -7,7 +7,7 @@
 //
 
 #import "PersonalViewController.h"
-
+#import "SKInvaders-Swift.h"
 @interface PersonalViewController ()
 
 @end
@@ -26,6 +26,9 @@
 
 #pragma mark - Actions
 - (IBAction)openWebsite:(UIButton *)sender {
+  WebViewController *webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVC"];
+  webViewController.url = @"";
+  [self presentViewController:webViewController animated:NO completion:NULL];
 }
 
 - (IBAction)openTwitter:(UIButton *)sender {
@@ -36,6 +39,9 @@
 }
 
 - (IBAction)openGithub:(UIButton *)sender {
+  WebViewController *webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVC"];
+  webViewController.url = @"";
+  [self presentViewController:webViewController animated:NO completion:NULL];
 }
 
 @end

@@ -206,16 +206,6 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     scoreLabel.position = CGPointMake(20 + scoreLabel.frame.size.width/2, self.size.height - (20 + scoreLabel.frame.size.height/2));
     [self addChild:scoreLabel];
  
-    SKLabelNode* healthLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-    //4
-    healthLabel.name = kHealthHudName;
-    healthLabel.fontSize = 15;
-    //5
-    healthLabel.fontColor = [SKColor redColor];
-    healthLabel.text = [NSString stringWithFormat:@"Health: %.1f%%", self.shipHealth * 100.0f];
-    //6
-    healthLabel.position = CGPointMake(self.size.width - healthLabel.frame.size.width/2 - 20, self.size.height - (20 + healthLabel.frame.size.height/2));
-    [self addChild:healthLabel];
 }
 
 - (SKNode*)makeBulletOfType:(BulletType)bulletType {
@@ -507,7 +497,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         [self runAction:[SKAction playSoundFileNamed:@"InvaderHit.wav" waitForCompletion:NO]];
 
         [contact.bodyB.node removeFromParent];
-      [contact.bodyA.node runAction:[SKAction scaleTo:100 duration:0.3]];
+        [contact.bodyA.node runAction:[SKAction scaleTo:100 duration:0.5]];
         
         //4
         [self adjustScoreBy:100];
@@ -543,10 +533,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         //2
         [self.motionManager stopAccelerometerUpdates];
         //3
-        GameOverScene* gameOverScene = [[GameOverScene alloc] initWithSize:self.size];
       self.paused = YES;
-        //[self.view presentScene:gameOverScene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
       [[NSNotificationCenter defaultCenter] postNotificationName:@"presentProduct" object:nil];
+      
     }
 }
 

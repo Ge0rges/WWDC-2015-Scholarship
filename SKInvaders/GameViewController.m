@@ -26,8 +26,8 @@
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    skView.showsFPS = NO;
+    skView.showsNodeCount = NO;
 
     // Create and configure the scene.
     SKScene * scene = [GameScene sceneWithSize:skView.bounds.size];
@@ -54,7 +54,7 @@
 }
 
 - (void)presentProjectViewController {
-  [self performSelector:@selector(presentProjectVC) withObject:nil afterDelay:0.3f];
+  [self performSelector:@selector(presentProjectVC) withObject:nil afterDelay:0];
 }
 
 - (void)presentProjectVC {

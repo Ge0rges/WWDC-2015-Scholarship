@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  SKInvaders
+//  GeorgesKanaan
 //
 
 //  Copyright (c) 2013 RepublicOfApps, LLC. All rights reserved.

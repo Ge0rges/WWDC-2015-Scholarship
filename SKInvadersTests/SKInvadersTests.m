@@ -1,6 +1,6 @@
 //
-//  SKInvadersTests.m
-//  SKInvadersTests
+//  GeorgesKanaanTests.m
+//  GeorgesKanaanTests
 //
 //  Created by iosdev on 9/9/13.
 //  Copyright (c) 2013 RepublicOfApps, LLC. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface SKInvadersTests : XCTestCase
+@interface GeorgesKanaanTests : XCTestCase
 
 @end
 
-@implementation SKInvadersTests
+@implementation GeorgesKanaanTests
 
 - (void)setUp
 {

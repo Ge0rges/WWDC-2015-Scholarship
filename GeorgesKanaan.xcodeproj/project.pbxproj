@@ -146,8 +146,8 @@
 		6AD4641117DE8BB800C19E75 = {
 			isa = PBXGroup;
 			children = (
-				6AD4642517DE8BB800C19E75 /* SKInvaders */,
-				6AD4644917DE8BB900C19E75 /* SKInvadersTests */,
+				6AD4642517DE8BB800C19E75 /* GeorgesKanaan */,
+				6AD4644917DE8BB900C19E75 /* GeorgesKanaanTests */,
 				6AD4641C17DE8BB800C19E75 /* Frameworks */,
 				6AD4641B17DE8BB800C19E75 /* Products */,
 			);
@@ -176,7 +176,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6AD4642517DE8BB800C19E75 /* SKInvaders */ = {
+		6AD4642517DE8BB800C19E75 /* GeorgesKanaan */ = {
 			isa = PBXGroup;
 			children = (
 				6AD4642E17DE8BB800C19E75 /* AppDelegate.h */,
@@ -188,6 +188,7 @@
 				6AD4643C17DE8BB800C19E75 /* Images.xcassets */,
 				6AD4642617DE8BB800C19E75 /* Supporting Files */,
 			);
+			name = GeorgesKanaan;
 			path = SKInvaders;
 			sourceTree = "<group>";
 		};
@@ -205,12 +206,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6AD4644917DE8BB900C19E75 /* SKInvadersTests */ = {
+		6AD4644917DE8BB900C19E75 /* GeorgesKanaanTests */ = {
 			isa = PBXGroup;
 			children = (
 				6AD4644F17DE8BB900C19E75 /* SKInvadersTests.m */,
 				6AD4644A17DE8BB900C19E75 /* Supporting Files */,
 			);
+			name = GeorgesKanaanTests;
 			path = SKInvadersTests;
 			sourceTree = "<group>";
 		};
@@ -284,9 +286,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AD4641917DE8BB800C19E75 /* SKInvaders */ = {
+		6AD4641917DE8BB800C19E75 /* GeorgesKanaan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AD4645317DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "SKInvaders" */;
+			buildConfigurationList = 6AD4645317DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "GeorgesKanaan" */;
 			buildPhases = (
 				6AD4641617DE8BB800C19E75 /* Sources */,
 				6AD4641717DE8BB800C19E75 /* Frameworks */,
@@ -296,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = SKInvaders;
+			name = GeorgesKanaan;
 			productName = SKInvaders;
 			productReference = 6AD4641A17DE8BB800C19E75 /* SKInvaders.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6AD4644117DE8BB900C19E75 /* SKInvadersTests */ = {
+		6AD4644117DE8BB900C19E75 /* GeorgesKanaanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AD4645617DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "SKInvadersTests" */;
+			buildConfigurationList = 6AD4645617DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "GeorgesKanaanTests" */;
 			buildPhases = (
 				6AD4643E17DE8BB900C19E75 /* Sources */,
 				6AD4643F17DE8BB900C19E75 /* Frameworks */,
@@ -314,7 +316,7 @@
 			dependencies = (
 				6AD4644817DE8BB900C19E75 /* PBXTargetDependency */,
 			);
-			name = SKInvadersTests;
+			name = GeorgesKanaanTests;
 			productName = SKInvadersTests;
 			productReference = 6AD4644217DE8BB900C19E75 /* SKInvadersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -333,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6AD4641517DE8BB800C19E75 /* Build configuration list for PBXProject "SKInvaders" */;
+			buildConfigurationList = 6AD4641517DE8BB800C19E75 /* Build configuration list for PBXProject "GeorgesKanaan" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -346,8 +348,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AD4641917DE8BB800C19E75 /* SKInvaders */,
-				6AD4644117DE8BB900C19E75 /* SKInvadersTests */,
+				6AD4641917DE8BB800C19E75 /* GeorgesKanaan */,
+				6AD4644117DE8BB900C19E75 /* GeorgesKanaanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -422,7 +424,7 @@
 /* Begin PBXTargetDependency section */
 		6AD4644817DE8BB900C19E75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6AD4641917DE8BB800C19E75 /* SKInvaders */;
+			target = 6AD4641917DE8BB800C19E75 /* GeorgesKanaan */;
 			targetProxy = 6AD4644717DE8BB900C19E75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -603,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AD4641517DE8BB800C19E75 /* Build configuration list for PBXProject "SKInvaders" */ = {
+		6AD4641517DE8BB800C19E75 /* Build configuration list for PBXProject "GeorgesKanaan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD4645117DE8BB900C19E75 /* Debug */,
@@ -612,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AD4645317DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "SKInvaders" */ = {
+		6AD4645317DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "GeorgesKanaan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD4645417DE8BB900C19E75 /* Debug */,
@@ -621,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AD4645617DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "SKInvadersTests" */ = {
+		6AD4645617DE8BB900C19E75 /* Build configuration list for PBXNativeTarget "GeorgesKanaanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD4645717DE8BB900C19E75 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  WebViewController.swift
-//  SKInvaders
+//  GeorgesKanaan
 //
 //  Created by Dani Arnaout on 4/18/15.
 //  Copyright (c) 2015 RepublicOfApps, LLC. All rights reserved.

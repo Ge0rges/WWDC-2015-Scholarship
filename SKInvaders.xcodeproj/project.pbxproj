@@ -44,6 +44,7 @@
 		6AD4648117DE965A00C19E75 /* ShipBullet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647D17DE965A00C19E75 /* ShipBullet.wav */; };
 		6AD4648217DE965A00C19E75 /* ShipHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647E17DE965A00C19E75 /* ShipHit.wav */; };
 		6AD4648417DE96B100C19E75 /* AssetLicensingNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4648317DE96B100C19E75 /* AssetLicensingNotes.txt */; };
+		DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		6AD4647D17DE965A00C19E75 /* ShipBullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShipBullet.wav; sourceTree = "<group>"; };
 		6AD4647E17DE965A00C19E75 /* ShipHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShipHit.wav; sourceTree = "<group>"; };
 		6AD4648317DE96B100C19E75 /* AssetLicensingNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AssetLicensingNotes.txt; sourceTree = "<group>"; };
+		DA7B36F21AE261FA0019AF6A /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,13 +169,9 @@
 			children = (
 				6AD4642E17DE8BB800C19E75 /* AppDelegate.h */,
 				6AD4642F17DE8BB800C19E75 /* AppDelegate.m */,
+				DA7B36F51AE262030019AF6A /* View Controllers */,
+				DA7B36F61AE2620B0019AF6A /* Scenes */,
 				6AD4643117DE8BB800C19E75 /* Main.storyboard */,
-				6AD4643417DE8BB800C19E75 /* GameViewController.h */,
-				6AD4643517DE8BB800C19E75 /* GameViewController.m */,
-				6AD4643717DE8BB800C19E75 /* GameScene.h */,
-				6AD4643817DE8BB800C19E75 /* GameScene.m */,
-				6A4B80E617E02A45002A234F /* GameOverScene.h */,
-				6A4B80E717E02A45002A234F /* GameOverScene.m */,
 				6AD4643C17DE8BB800C19E75 /* Images.xcassets */,
 				6AD4642617DE8BB800C19E75 /* Supporting Files */,
 			);
@@ -241,6 +240,28 @@
 				6AD4647E17DE965A00C19E75 /* ShipHit.wav */,
 			);
 			name = "Sound Effects";
+			sourceTree = "<group>";
+		};
+		DA7B36F51AE262030019AF6A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4643417DE8BB800C19E75 /* GameViewController.h */,
+				6AD4643517DE8BB800C19E75 /* GameViewController.m */,
+				DA7B36F21AE261FA0019AF6A /* ProjectViewController.h */,
+				DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DA7B36F61AE2620B0019AF6A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4643717DE8BB800C19E75 /* GameScene.h */,
+				6AD4643817DE8BB800C19E75 /* GameScene.m */,
+				6A4B80E617E02A45002A234F /* GameOverScene.h */,
+				6A4B80E717E02A45002A234F /* GameOverScene.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +384,7 @@
 				6AD4643917DE8BB800C19E75 /* GameScene.m in Sources */,
 				6AD4643617DE8BB800C19E75 /* GameViewController.m in Sources */,
 				6AD4643017DE8BB800C19E75 /* AppDelegate.m in Sources */,
+				DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */,
 				6AD4642C17DE8BB800C19E75 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -475,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -489,6 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKInvaders/SKInvaders-Prefix.pch";
 				INFOPLIST_FILE = "SKInvaders/SKInvaders-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -503,6 +526,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKInvaders/SKInvaders-Prefix.pch";
 				INFOPLIST_FILE = "SKInvaders/SKInvaders-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;

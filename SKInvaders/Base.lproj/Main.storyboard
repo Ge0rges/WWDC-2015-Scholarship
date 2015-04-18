@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LVB-YS-i5n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -17,9 +20,72 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Project-->
+        <scene sceneID="zeP-Je-iuG">
+            <objects>
+                <viewController storyboardIdentifier="PVC" title="Project" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QTw-mg-vfZ" customClass="ProjectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BUZ-M0-cUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ayE-E8-jjw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9r-qf-oct">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-qc-WpI">
+                                <rect key="frame" x="16" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ib7-qc-WpI" secondAttribute="height" multiplier="1:1" id="Pjv-AF-R6k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the project description. Make sure to brief but informative text about your project!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-u0-vUW">
+                                <rect key="frame" x="16" y="136" width="288" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwG-cz-xNV">
+                                <rect key="frame" x="124" y="20" width="166" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pTV-sj-vSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38378366712707179" green="0.014024850219933525" blue="0.05258124146921344" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ib7-qc-WpI" firstAttribute="leading" secondItem="M9r-qf-oct" secondAttribute="leadingMargin" id="JfP-Qi-kje"/>
+                            <constraint firstItem="lwG-cz-xNV" firstAttribute="centerY" secondItem="ib7-qc-WpI" secondAttribute="centerY" id="NB9-oS-E1r"/>
+                            <constraint firstItem="lwG-cz-xNV" firstAttribute="centerX" secondItem="ib7-qc-WpI" secondAttribute="centerX" constant="141" id="Uee-GV-rEX"/>
+                            <constraint firstItem="lwG-cz-xNV" firstAttribute="height" secondItem="ib7-qc-WpI" secondAttribute="height" id="VnB-85-W7t"/>
+                            <constraint firstItem="b1z-u0-vUW" firstAttribute="trailing" secondItem="M9r-qf-oct" secondAttribute="trailingMargin" id="lXK-Bp-xok"/>
+                            <constraint firstItem="b1z-u0-vUW" firstAttribute="top" secondItem="ib7-qc-WpI" secondAttribute="bottom" constant="16" id="qeC-Jy-4HL"/>
+                            <constraint firstItem="lwG-cz-xNV" firstAttribute="leading" secondItem="ib7-qc-WpI" secondAttribute="trailing" constant="8" id="ucM-pj-Juv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lwG-cz-xNV" secondAttribute="trailing" constant="14" id="uue-FW-YRp"/>
+                            <constraint firstItem="ib7-qc-WpI" firstAttribute="top" secondItem="BUZ-M0-cUS" secondAttribute="bottom" id="ynG-6Q-vEj"/>
+                            <constraint firstItem="b1z-u0-vUW" firstAttribute="leading" secondItem="M9r-qf-oct" secondAttribute="leadingMargin" id="zlS-18-vtV"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDu-N0-RX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="-233"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

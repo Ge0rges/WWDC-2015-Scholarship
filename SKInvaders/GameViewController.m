@@ -59,10 +59,17 @@
 }
 
 - (void)presentProjectVC {
-  ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PVC"];
+  ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectVC"];
   projectViewController.appKey = @"WhatToPack";
     
   [self presentViewController:projectViewController animated:NO completion:NULL];
+}
+
+- (void)presentPersonalVC {
+    ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonalVC"];
+    projectViewController.appKey = @"WhatToPack";
+    
+    [self presentViewController:projectViewController animated:NO completion:NULL];
 }
 
 @end

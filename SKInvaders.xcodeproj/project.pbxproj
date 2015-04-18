@@ -47,6 +47,7 @@
 		9213D13D1AE2802F004F2594 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9213D13C1AE2802F004F2594 /* Projects.plist */; };
 		DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */; };
 		DA7B36FA1AE273330019AF6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7B36F91AE273330019AF6A /* StoreKit.framework */; };
+		DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		DA7B36F21AE261FA0019AF6A /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 		DA7B36F91AE273330019AF6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DA7B36FB1AE287E30019AF6A /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +259,8 @@
 				6AD4643517DE8BB800C19E75 /* GameViewController.m */,
 				DA7B36F21AE261FA0019AF6A /* ProjectViewController.h */,
 				DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */,
+				DA7B36FB1AE287E30019AF6A /* PersonalViewController.h */,
+				DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A4B80E817E02A45002A234F /* GameOverScene.m in Sources */,
+				DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */,
 				6AD4643917DE8BB800C19E75 /* GameScene.m in Sources */,
 				6AD4643617DE8BB800C19E75 /* GameViewController.m in Sources */,
 				6AD4643017DE8BB800C19E75 /* AppDelegate.m in Sources */,

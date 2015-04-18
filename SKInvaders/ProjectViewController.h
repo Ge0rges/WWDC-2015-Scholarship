@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h>
 
-@interface ProjectViewController : UIViewController
+@interface ProjectViewController : UIViewController <SKStoreProductViewControllerDelegate>
+
+@property (strong, nonatomic) NSString *appKey;
 
 @end

@@ -147,24 +147,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-6c-38r">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0W-Xu-Pfe">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="gn9-ZM-dTZ"/>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-6c-38r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="vuu-k8-eQv" id="IxV-GR-zr0"/>
                                 </connections>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbo-B3-7un">
-                                <rect key="frame" x="16" y="8" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapCancel:" destination="vuu-k8-eQv" eventType="touchUpInside" id="TZO-By-KLn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F0W-Xu-Pfe" firstAttribute="bottom" secondItem="b6o-Ts-fST" secondAttribute="top" id="0YM-Tl-4b8"/>
+                            <constraint firstAttribute="trailing" secondItem="AaS-6c-38r" secondAttribute="trailing" id="5eV-rM-GbA"/>
+                            <constraint firstItem="F0W-Xu-Pfe" firstAttribute="top" secondItem="AaS-6c-38r" secondAttribute="bottom" id="71X-fJ-Rru"/>
+                            <constraint firstItem="AaS-6c-38r" firstAttribute="leading" secondItem="o8q-io-1p6" secondAttribute="leading" id="TG5-CH-6GI"/>
+                            <constraint firstItem="AaS-6c-38r" firstAttribute="top" secondItem="ViT-LB-jm3" secondAttribute="bottom" id="Xdq-ry-8Vh"/>
+                            <constraint firstItem="F0W-Xu-Pfe" firstAttribute="trailing" secondItem="AaS-6c-38r" secondAttribute="trailing" id="Xo7-1X-NUv"/>
+                            <constraint firstItem="AaS-6c-38r" firstAttribute="leading" secondItem="F0W-Xu-Pfe" secondAttribute="leading" id="qSU-bS-HcX"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="AaS-6c-38r" id="eZv-4f-aKX"/>

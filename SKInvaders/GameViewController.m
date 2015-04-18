@@ -7,8 +7,6 @@
 //
 
 #import "GameViewController.h"
-#import "ProjectViewController.h"
-#import "GameScene.h"
 
 @implementation GameViewController
 
@@ -58,17 +56,15 @@
 }
 
 - (void)presentProjectVC {
-  ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectVC"];
-  projectViewController.appKey = @"WhatToPack";
+  ProjectViewController *projectVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectVC"];
+  projectVC.appKey = @"WhatToPack";
     
-  [self presentViewController:projectViewController animated:NO completion:NULL];
+  [self.navigationController pushViewController:projectVC animated:NO];
 }
 
 - (void)presentPersonalVC {
-    ProjectViewController *projectViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonalVC"];
-    projectViewController.appKey = @"WhatToPack";
-    
-    [self presentViewController:projectViewController animated:NO completion:NULL];
+    PersonalViewController *personalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonalVC"];
+    [self.navigationController pushViewController:personalVC animated:NO];
 }
 
 @end

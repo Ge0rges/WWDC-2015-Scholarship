@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "ProjectViewController.h"
+#import "PersonalViewController.h"
+#import "GameScene.h"
 
 @interface GameViewController : UIViewController
 

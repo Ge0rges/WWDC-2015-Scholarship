@@ -44,8 +44,8 @@
 		6AD4648117DE965A00C19E75 /* ShipBullet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647D17DE965A00C19E75 /* ShipBullet.wav */; };
 		6AD4648217DE965A00C19E75 /* ShipHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647E17DE965A00C19E75 /* ShipHit.wav */; };
 		6AD4648417DE96B100C19E75 /* AssetLicensingNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4648317DE96B100C19E75 /* AssetLicensingNotes.txt */; };
+		9213D13D1AE2802F004F2594 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9213D13C1AE2802F004F2594 /* Projects.plist */; };
 		DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */; };
-		DA7B36F81AE267CE0019AF6A /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA7B36F71AE267CE0019AF6A /* Projects.plist */; };
 		DA7B36FA1AE273330019AF6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7B36F91AE273330019AF6A /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,9 +104,9 @@
 		6AD4647D17DE965A00C19E75 /* ShipBullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShipBullet.wav; sourceTree = "<group>"; };
 		6AD4647E17DE965A00C19E75 /* ShipHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShipHit.wav; sourceTree = "<group>"; };
 		6AD4648317DE96B100C19E75 /* AssetLicensingNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AssetLicensingNotes.txt; sourceTree = "<group>"; };
+		9213D13C1AE2802F004F2594 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
 		DA7B36F21AE261FA0019AF6A /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
-		DA7B36F71AE267CE0019AF6A /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
 		DA7B36F91AE273330019AF6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -178,7 +178,7 @@
 				DA7B36F51AE262030019AF6A /* View Controllers */,
 				DA7B36F61AE2620B0019AF6A /* Scenes */,
 				6AD4643117DE8BB800C19E75 /* Main.storyboard */,
-				DA7B36F71AE267CE0019AF6A /* Projects.plist */,
+				9213D13C1AE2802F004F2594 /* Projects.plist */,
 				6AD4643C17DE8BB800C19E75 /* Images.xcassets */,
 				6AD4642617DE8BB800C19E75 /* Supporting Files */,
 			);
@@ -368,7 +368,7 @@
 				6AD4648417DE96B100C19E75 /* AssetLicensingNotes.txt in Resources */,
 				6AD4647617DE8E9D00C19E75 /* Ship.png in Resources */,
 				6AD4643317DE8BB800C19E75 /* Main.storyboard in Resources */,
-				DA7B36F81AE267CE0019AF6A /* Projects.plist in Resources */,
+				9213D13D1AE2802F004F2594 /* Projects.plist in Resources */,
 				6AD4646A17DE8E9C00C19E75 /* InvaderA_00.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

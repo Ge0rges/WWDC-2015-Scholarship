@@ -507,8 +507,10 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     } else if ([nodeNames containsObject:kInvaderName] && [nodeNames containsObject:kShipFiredBulletName]) {
         // Ship bullet hit an invader
         [self runAction:[SKAction playSoundFileNamed:@"InvaderHit.wav" waitForCompletion:NO]];
-        [contact.bodyA.node removeFromParent];
+
         [contact.bodyB.node removeFromParent];
+      [contact.bodyA.node runAction:[SKAction scaleTo:100 duration:0.3]];
+        
         //4
         [self adjustScoreBy:100];
     }
@@ -544,7 +546,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         [self.motionManager stopAccelerometerUpdates];
         //3
         GameOverScene* gameOverScene = [[GameOverScene alloc] initWithSize:self.size];
-        [self.view presentScene:gameOverScene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
+      self.paused = YES;
+        //[self.view presentScene:gameOverScene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"hello" object:nil];
     }
 }
 

@@ -10,7 +10,10 @@
 
 #define ProjectPlistPath [[NSBundle mainBundle] pathForResource:@"Projects" ofType:@"plist"]
 
-@interface ProjectViewController ()
+@interface ProjectViewController () {
+  NSDictionary *projects;
+  NSDictionary *app;
+}
 
 @property (strong, nonatomic) IBOutlet UIImageView *iconView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -22,19 +25,24 @@
 @implementation ProjectViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
+  
+  //fetch the project details from the plist
+  projects = [NSDictionary dictionaryWithContentsOfFile:ProjectPlistPath];
+  app = [projects objectForKey:_appKey];
+  
+  //check if we should set up the view
+  NSString *appID = app[@"appID"];
+  if (appID) {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    imageView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:imageView];
+    [self showAppSheetForID:appID];
     
-    //fetch the project details from the plist
-    NSDictionary *projects = [NSDictionary dictionaryWithContentsOfFile:ProjectPlistPath];
-    NSDictionary *app = [projects objectForKey:_appKey];
-    
-    //check if we can show the app in StoreKit
-    NSString *appID = app[@"appID"];
-    if (appID)
-        [self showAppSheetForID:appID];
-    else
-        [self setUpProjectForApp:app];
+  } else {
+    [self setUpProjectForApp];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +51,7 @@
 }
 
 #pragma mark - Project Setup
-- (void)setUpProjectForApp:(NSDictionary*)app {
+- (void)setUpProjectForApp {
     //fill the view
     [self.iconView setImage:[UIImage imageNamed:app[@"imageName"]]];
     [self.nameLabel setText:app[@"name"]];
@@ -62,9 +70,17 @@
     // Configure View Controller
     [storeProductViewController setDelegate:self];
     [storeProductViewController loadProductWithParameters:params completionBlock:^(BOOL result, NSError *error) {
-        // Present Store Product View Controller
-        if (!error) [self presentViewController:storeProductViewController animated:YES completion:nil];
+      // Present Store Product View Controller
+      if (!error && result) {
+        [self presentViewController:storeProductViewController animated:NO completion:NULL];
+      }
     }];
+}
+
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
+  [self dismissViewControllerAnimated:NO completion:^{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+  }];
 }
 
 @end

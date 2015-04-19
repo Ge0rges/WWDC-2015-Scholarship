@@ -14,4 +14,7 @@
 
 @interface GameViewController : UIViewController
 
+- (void)presentPersonalVC;
+- (void)presentProjectVCForAppKey:(NSString*)appKey;
+
 @end

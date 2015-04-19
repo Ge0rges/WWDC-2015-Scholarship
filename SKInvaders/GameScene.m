@@ -41,8 +41,8 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 //2
 #define kInvaderSize CGSizeMake(24, 16)
 #define kInvaderGridSpacing CGSizeMake(12, 12)
-#define kInvaderRowCount 6
-#define kInvaderColCount 6
+#define kInvaderRowCount 3
+#define kInvaderColCount 3
 //3
 #define kInvaderName @"invader"
 #define kShipSize CGSizeMake(30, 16)
@@ -58,16 +58,18 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 #pragma mark - Private GameScene Properties
 
 @interface GameScene ()
+
 @property BOOL contentCreated;
 @property InvaderMovementDirection invaderMovementDirection;
 @property NSTimeInterval timeOfLastMove;
 @property NSTimeInterval timePerMove;
-@property (strong) CMMotionManager* motionManager;
-@property (strong) NSMutableArray* tapQueue;
-@property (strong) NSMutableArray* contactQueue;
+@property (strong) CMMotionManager *motionManager;
+@property (strong) NSMutableArray *tapQueue;
+@property (strong) NSMutableArray *contactQueue;
 @property NSUInteger score;
 @property CGFloat shipHealth;
 @property BOOL gameEnding;
+
 @end
 
 
@@ -107,14 +109,16 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (NSArray *)loadInvaderTexturesOfType:(InvaderType)invaderType {
-    NSString* prefix;
+    NSString *prefix;
     switch (invaderType) {
         case InvaderTypeA:
             prefix = @"InvaderA";
             break;
+            
         case InvaderTypeB:
             prefix = @"InvaderB";
             break;
+            
         case InvaderTypeC:
         default:
             prefix = @"InvaderC";
@@ -126,9 +130,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
  
 - (SKNode *)makeInvaderOfType:(InvaderType)invaderType {
-    NSArray* invaderTextures = [self loadInvaderTexturesOfType:invaderType];
+    NSArray *invaderTextures = [self loadInvaderTexturesOfType:invaderType];
     //2
-    SKSpriteNode* invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
+    SKSpriteNode *invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
     invader.name = kInvaderName;
     //3
     [invader runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:invaderTextures timePerFrame:self.timePerMove]]];
@@ -158,7 +162,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         //4
         for (NSUInteger col = 0; col < kInvaderColCount; ++col) {
             //5
-            SKNode* invader = [self makeInvaderOfType:invaderType];
+            SKNode *invader = [self makeInvaderOfType:invaderType];
             invader.position = invaderPosition;
             [self addChild:invader];
             //6
@@ -169,7 +173,8 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (void)setupShip {
     //1
-    SKNode* ship = [self makeShip];
+    SKNode *ship = [self makeShip];
+    
     //2
     ship.position = CGPointMake(self.size.width / 2.0f, kShipSize.height/2.0f);
     [self addChild:ship];
@@ -178,7 +183,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
  
 - (SKNode *)makeShip {
     //1
-    SKSpriteNode* ship = [SKSpriteNode spriteNodeWithImageNamed:@"Ship.png"];
+    SKSpriteNode *ship = [SKSpriteNode spriteNodeWithImageNamed:@"Ship.png"];
     ship.name = kShipName;
     //2
     ship.color = [UIColor greenColor];
@@ -195,7 +200,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (void)setupHud {
-    SKLabelNode* scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+    SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
     //1
     scoreLabel.name = kScoreHudName;
     scoreLabel.fontSize = 15;
@@ -209,7 +214,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (SKNode *)makeBulletOfType:(BulletType)bulletType {
-    SKNode* bullet;
+    SKNode *bullet;
  
     switch (bulletType) {
         case ShipFiredBulletType:
@@ -222,6 +227,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
             bullet.physicsBody.contactTestBitMask = kInvaderCategory;
             bullet.physicsBody.collisionBitMask = 0x0;
             break;
+            
         case InvaderFiredBulletType:
             bullet = [SKSpriteNode spriteNodeWithColor:[SKColor magentaColor] size:kBulletSize];
             bullet.name = kInvaderFiredBulletName;
@@ -232,6 +238,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
             bullet.physicsBody.contactTestBitMask = kShipCategory;
             bullet.physicsBody.collisionBitMask = 0x0;
             break;
+            
         default:
             bullet = nil;
             break;
@@ -245,6 +252,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (void)update:(NSTimeInterval)currentTime {
     if ([self isGameOver]) [self endGame];
+    
     [self processContactsForUpdate:currentTime];
     [self processUserTapsForUpdate:currentTime];
     [self processUserMotionForUpdate:currentTime];
@@ -266,13 +274,16 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
             case InvaderMovementDirectionRight:
                 node.position = CGPointMake(node.position.x + 10, node.position.y);
                 break;
+                
             case InvaderMovementDirectionLeft:
                 node.position = CGPointMake(node.position.x - 10, node.position.y);
                 break;
+                
             case InvaderMovementDirectionDownThenLeft:
             case InvaderMovementDirectionDownThenRight:
                 node.position = CGPointMake(node.position.x, node.position.y - 10);
                 break;
+                
             InvaderMovementDirectionNone:
             default:
                 break;
@@ -298,7 +309,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (void)processUserTapsForUpdate:(NSTimeInterval)currentTime {
     //1
-    for (NSNumber* tapCount in [self.tapQueue copy]) {
+    for (NSNumber *tapCount in [self.tapQueue copy]) {
         if ([tapCount unsignedIntegerValue] == 1) {
             //2
             [self fireShipBullets];
@@ -309,11 +320,11 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (void)fireInvaderBulletsForUpdate:(NSTimeInterval)currentTime {
-    SKNode* existingBullet = [self childNodeWithName:kInvaderFiredBulletName];
+    SKNode *existingBullet = [self childNodeWithName:kInvaderFiredBulletName];
     //1
     if (!existingBullet) {
         //2
-        NSMutableArray* allInvaders = [NSMutableArray array];
+        NSMutableArray *allInvaders = [NSMutableArray array];
         [self enumerateChildNodesWithName:kInvaderName usingBlock:^(SKNode *node, BOOL *stop) {
             [allInvaders addObject:node];
         }];
@@ -321,9 +332,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         if ([allInvaders count] > 0) {
             //3
             NSUInteger allInvadersIndex = arc4random_uniform((int)[allInvaders count]);
-            SKNode* invader = [allInvaders objectAtIndex:allInvadersIndex];
+            SKNode *invader = [allInvaders objectAtIndex:allInvadersIndex];
             //4
-            SKNode* bullet = [self makeBulletOfType:InvaderFiredBulletType];
+            SKNode *bullet = [self makeBulletOfType:InvaderFiredBulletType];
             bullet.position = CGPointMake(invader.position.x, invader.position.y - invader.frame.size.height/2 + bullet.frame.size.height / 2);
             //5
             CGPoint bulletDestination = CGPointMake(invader.position.x, - bullet.frame.size.height / 2);
@@ -334,7 +345,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (void)processContactsForUpdate:(NSTimeInterval)currentTime {
-    for (SKPhysicsContact* contact in [self.contactQueue copy]) {
+    for (SKPhysicsContact *contact in [self.contactQueue copy]) {
         [self handleContact:contact];
         [self.contactQueue removeObject:contact];
     }
@@ -356,6 +367,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
                     *stop = YES;
                 }
                 break;
+                
             case InvaderMovementDirectionLeft:
                 //4
                 if (CGRectGetMinX(node.frame) <= 1.0f) {
@@ -363,18 +375,21 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
                     *stop = YES;
                 }
                 break;
+                
             case InvaderMovementDirectionDownThenLeft:
                 //5
                 proposedMovementDirection = InvaderMovementDirectionLeft;
                 [self adjustInvaderMovementToTimePerMove:self.timePerMove * 0.8];
                 *stop = YES;
                 break;
+                
             case InvaderMovementDirectionDownThenRight:
                 //6
                 proposedMovementDirection = InvaderMovementDirectionRight;
                 [self adjustInvaderMovementToTimePerMove:self.timePerMove * 0.8];
                 *stop = YES;
                 break;
+                
             default:
                 break;
         }
@@ -416,11 +431,11 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
  
 - (void)fireShipBullets {
-    SKNode* existingBullet = [self childNodeWithName:kShipFiredBulletName];
+    SKNode *existingBullet = [self childNodeWithName:kShipFiredBulletName];
     //1
     if (!existingBullet) {
-        SKNode* ship = [self childNodeWithName:kShipName];
-        SKNode* bullet = [self makeBulletOfType:ShipFiredBulletType];
+        SKNode *ship = [self childNodeWithName:kShipName];
+        SKNode *bullet = [self makeBulletOfType:ShipFiredBulletType];
         //2
         bullet.position = CGPointMake(ship.position.x, ship.position.y + ship.frame.size.height - bullet.frame.size.height / 2);
         //3
@@ -431,21 +446,8 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 #pragma mark - User Tap Helpers
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Intentional no-op
-}
- 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Intentional no-op
-}
- 
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Intentional no-op
-}
- 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch* touch = [touches anyObject];
+    UITouch *touch = [touches anyObject];
     if (touch.tapCount == 1) [self.tapQueue addObject:@1];
 }
 
@@ -461,7 +463,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     //1
     self.shipHealth = MAX(self.shipHealth + healthAdjustment, 0);
  
-    SKLabelNode* health = (SKLabelNode *)[self childNodeWithName:kHealthHudName];
+    SKLabelNode *health = (SKLabelNode *)[self childNodeWithName:kHealthHudName];
     health.text = [NSString stringWithFormat:@"Health: %.1f%%", self.shipHealth * 100];
 }
 
@@ -475,7 +477,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     // Ensure you haven't already handled this contact and removed its nodes
     if (!contact.bodyA.node.parent || !contact.bodyB.node.parent) return;
  
-    NSArray* nodeNames = @[contact.bodyA.node.name, contact.bodyB.node.name];
+    NSArray *nodeNames = @[contact.bodyA.node.name, contact.bodyB.node.name];
     if ([nodeNames containsObject:kShipName] && [nodeNames containsObject:kInvaderFiredBulletName]) {
         // Invader bullet hit a ship
         [self runAction:[SKAction playSoundFileNamed:@"ShipHit.wav" waitForCompletion:NO]];
@@ -485,9 +487,10 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
             //2
             [contact.bodyA.node removeFromParent];
             [contact.bodyB.node removeFromParent];
+            
         } else {
             //3
-            SKNode* ship = [self childNodeWithName:kShipName];
+            SKNode *ship = [self childNodeWithName:kShipName];
             ship.alpha = self.shipHealth;
             if (contact.bodyA.node == ship) [contact.bodyB.node removeFromParent];
             else [contact.bodyA.node removeFromParent];
@@ -500,7 +503,15 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         [contact.bodyA.node runAction:[SKAction scaleTo:100 duration:0.5]];
         
         //4
-        [self adjustScoreBy:100];
+        [self adjustScoreBy:(kInvaderColCount*kInvaderRowCount)/100];
+        
+        //present the correct View
+        if ([contact.bodyA.node.name isEqualToString:@"personal"]) {
+            [self.gvc presentPersonalVC];
+        
+        } else {
+            [self.gvc presentProjectVCForAppKey:contact.bodyA.node.name];
+        }
     }
 }
 
@@ -508,7 +519,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 - (BOOL)isGameOver {
     //1
-    SKNode* invader = [self childNodeWithName:kInvaderName];
+    SKNode *invader = [self childNodeWithName:kInvaderName];
  
     //2
     __block BOOL invaderTooLow = NO;
@@ -520,7 +531,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     }];
  
     //3
-    SKNode* ship = [self childNodeWithName:kShipName];
+    SKNode *ship = [self childNodeWithName:kShipName];
  
     //4
     return !invader || invaderTooLow || !ship;
@@ -534,8 +545,6 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         [self.motionManager stopAccelerometerUpdates];
         //3
       self.paused = YES;
-      [[NSNotificationCenter defaultCenter] postNotificationName:@"presentProduct" object:nil];
-      
     }
 }
 

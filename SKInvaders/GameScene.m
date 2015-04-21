@@ -111,22 +111,21 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 - (NSArray *)loadInvaderTexturesOfType:(InvaderType)invaderType {
     NSString *prefix;
     switch (invaderType) {
-        case InvaderTypeA:
-            prefix = @"InvaderA";
+        case InvaderTypeApp:
+            prefix = @"";
             break;
             
-        case InvaderTypeB:
-            prefix = @"InvaderB";
+        case InvaderTypePersonal:
+            prefix = @"";
             break;
             
-        case InvaderTypeC:
+        case InvaderTypeInternship:
         default:
-            prefix = @"InvaderC";
+            prefix = @"";
             break;
     }
     //1
-    return @[[SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@_00.png", prefix]],
-             [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"%@_01.png", prefix]]];
+    return @[[SKTexture textureWithImageNamed:@"WhatToPack"]];
 }
  
 - (SKNode *)makeInvaderOfType:(InvaderType)invaderType {

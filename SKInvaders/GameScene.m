@@ -14,9 +14,9 @@
 
 //1
 typedef enum InvaderType {
-    InvaderTypeA,
-    InvaderTypeB,
-    InvaderTypeC
+    InvaderTypeApp,
+    InvaderTypePersonal,
+    InvaderTypeInternship
 } InvaderType;
 
 typedef enum InvaderMovementDirection {

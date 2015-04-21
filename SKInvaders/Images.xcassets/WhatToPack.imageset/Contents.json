@@ -2,18 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "GitHub-Mark-32px.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "GitHub-Mark-64px.png"
+      "filename" : "What to Pack?.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "GitHub-Mark-120px-plus.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

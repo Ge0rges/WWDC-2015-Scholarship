@@ -3,7 +3,7 @@
 //  GeorgesKanaan
 //
 
-//  Copyright (c) 2013 RepublicOfApps, LLC. All rights reserved.
+//  Copyright (c) 2013 Georges Kanaan, LLC. All rights reserved.
 //
 
 #import "GameScene.h"
@@ -40,7 +40,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
 #define kInvaderSize CGSizeMake(24, 16)
 #define kInvaderGridSpacing CGSizeMake(12, 12)
-#define kInvaderRowCount 3
+#define kInvaderRowCount 4
 #define kInvaderColCount 3
 
 #define kProjectPlistPath [[NSBundle mainBundle] pathForResource:@"Projects" ofType:@"plist"]
@@ -110,17 +110,19 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 }
 
 - (NSArray *)loadInvaderTexturesForAppID:(NSString*)appID {
-    return @[[SKTexture textureWithImageNamed:@"WhatToPack"]];
+    return @[[SKTexture textureWithImageNamed:appID]];
 }
  
 - (SKNode *)makeInvaderOfType:(InvaderType)invaderType withIndex:(NSInteger)index {
-    NSString *appID = [[kAppIdDict allKeys] objectAtIndex:index];
+  NSArray *keys = [kAppIdDict allKeys];
+    NSString *appID = [keys objectAtIndex:index];
   
     NSArray *invaderTextures = [self loadInvaderTexturesForAppID:appID];
     //2
     SKSpriteNode *invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
     invader.name = kInvaderName;
     invader.appID = appID;
+    invader.size = CGSizeMake(25, 25);
   
     //3
     [invader runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:invaderTextures timePerFrame:self.timePerMove]]];
@@ -150,7 +152,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         //4
         for (NSUInteger col = 0; col < kInvaderColCount; ++col) {
             //5
-            SKNode *invader = [self makeInvaderOfType:invaderType withIndex:row+col];
+            SKNode *invader = [self makeInvaderOfType:invaderType withIndex:col*kInvaderRowCount + row];
             invader.position = invaderPosition;
             [self addChild:invader];
             //6
@@ -484,21 +486,23 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
             else [contact.bodyA.node removeFromParent];
         }
     } else if ([nodeNames containsObject:kInvaderName] && [nodeNames containsObject:kShipFiredBulletName]) {
+        SKSpriteNode *invader = (SKSpriteNode*)contact.bodyA.node;
+      
         // Ship bullet hit an invader
         [self runAction:[SKAction playSoundFileNamed:@"InvaderHit.wav" waitForCompletion:NO]];
 
         [contact.bodyB.node removeFromParent];
-        [contact.bodyA.node runAction:[SKAction scaleTo:100 duration:0.5]];
+        [invader runAction:[SKAction scaleTo:100 duration:0.5]];
         
         //4
         [self adjustScoreBy:(kInvaderColCount*kInvaderRowCount)/100];
         
         //present the correct View
-        if ([contact.bodyA.node.name isEqualToString:@"personal"]) {
+        if ([invader.appID isEqualToString:@"Ge0rges"]) {
             [self.gvc presentPersonalVC];
         
         } else {
-            [self.gvc presentProjectVCForAppKey:contact.bodyA.node.name];
+            [self.gvc presentProjectVCForAppKey:invader.appID];
         }
     }
 }

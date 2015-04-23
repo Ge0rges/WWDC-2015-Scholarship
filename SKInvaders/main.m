@@ -3,7 +3,7 @@
 //  GeorgesKanaan
 //
 //  Created by iosdev on 9/9/13.
-//  Copyright (c) 2013 RepublicOfApps, LLC. All rights reserved.
+//  Copyright (c) 2013 Georges Kanaan, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

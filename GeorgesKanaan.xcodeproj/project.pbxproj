@@ -37,7 +37,7 @@
 		DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */; };
 		DA7B36FA1AE273330019AF6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7B36F91AE273330019AF6A /* StoreKit.framework */; };
 		DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */; };
-		DA97578B1AE8E9CE0088F184 /* GKSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */; };
+		DA97578B1AE8E9CE0088F184 /* SKSpriteNodeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97578A1AE8E9CE0088F184 /* SKSpriteNodeExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,8 @@
 		DA7B36F91AE273330019AF6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DA7B36FB1AE287E30019AF6A /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
-		DA9757891AE8E9CE0088F184 /* GKSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSpriteNode.h; sourceTree = "<group>"; };
-		DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSpriteNode.m; sourceTree = "<group>"; };
+		DA9757891AE8E9CE0088F184 /* SKSpriteNodeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSpriteNodeExtensions.h; sourceTree = "<group>"; };
+		DA97578A1AE8E9CE0088F184 /* SKSpriteNodeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSpriteNodeExtensions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,8 +254,8 @@
 		DA97578C1AE8E9EE0088F184 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				DA9757891AE8E9CE0088F184 /* GKSpriteNode.h */,
-				DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */,
+				DA9757891AE8E9CE0088F184 /* SKSpriteNodeExtensions.h */,
+				DA97578A1AE8E9CE0088F184 /* SKSpriteNodeExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -369,7 +369,7 @@
 				DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */,
 				6AD4643917DE8BB800C19E75 /* GameScene.m in Sources */,
 				6AD4643617DE8BB800C19E75 /* GameViewController.m in Sources */,
-				DA97578B1AE8E9CE0088F184 /* GKSpriteNode.m in Sources */,
+				DA97578B1AE8E9CE0088F184 /* SKSpriteNodeExtensions.m in Sources */,
 				6AD4643017DE8BB800C19E75 /* AppDelegate.m in Sources */,
 				DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */,
 				6AD4642C17DE8BB800C19E75 /* main.m in Sources */,

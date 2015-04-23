@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Ge0rges</key>
+	<string></string>
 	<key>Dude</key>
 	<dict>
 		<key>name</key>
@@ -10,8 +12,6 @@
 		<string>In Development</string>
 		<key>description</key>
 		<string>A Context Aware awesome app.</string>
-		<key>imageName</key>
-		<string>Dude</string>
 	</dict>
 	<key>WhatToPack</key>
 	<dict>
@@ -41,14 +41,16 @@
 		<string>Published / In Development</string>
 		<key>description</key>
 		<string>Dude was originally developed as a jailbreak tweak by GN-OS a group I co-founded. It forces a dark keyboard throughout the operating system. We are now developing an official keyboard which will contain new advancements in auto-correct.</string>
-		<key>imageName</key>
-		<string>Bloard</string>
 	</dict>
-	<key>Internships</key>
-	<array/>
+	<key>Saily</key>
+	<dict/>
+	<key>FOO</key>
+	<dict/>
 	<key>LiberiOS</key>
 	<dict/>
 	<key>Hackathon</key>
-	<dict/>
+	<string></string>
+	<key>BadgeClearer</key>
+	<string></string>
 </dict>
 </plist>

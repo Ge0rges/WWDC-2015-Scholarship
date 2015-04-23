@@ -27,21 +27,26 @@
 #pragma mark - Actions
 - (IBAction)openWebsite:(UIButton *)sender {
   WebViewController *webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVC"];
-  webViewController.url = @"";
-  [self presentViewController:webViewController animated:NO completion:NULL];
+  webViewController.url = @"http://ge0rges.me";
+  [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 - (IBAction)openTwitter:(UIButton *)sender {
     NSURL *twitterURL = [NSURL URLWithString:@"twitter://user?screen_name=Ge0rges13"];
     if ([[UIApplication sharedApplication] canOpenURL:twitterURL]) {
         [[UIApplication sharedApplication] openURL:twitterURL];
+    
+    } else {
+      WebViewController *webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVC"];
+      webViewController.url = @"https://twitter.com/Ge0rges13";
+      [self presentViewController:webViewController animated:YES completion:NULL];
     }
 }
 
 - (IBAction)openGithub:(UIButton *)sender {
   WebViewController *webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVC"];
-  webViewController.url = @"";
-  [self presentViewController:webViewController animated:NO completion:NULL];
+  webViewController.url = @"https://github.com/Ge0rges";
+  [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 @end

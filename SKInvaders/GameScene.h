@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "GameViewController.h"
+#import "GKSpriteNode.h"
 
 @class GameViewController;
 

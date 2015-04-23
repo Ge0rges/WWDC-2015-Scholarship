@@ -37,6 +37,7 @@
 		DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36F31AE261FA0019AF6A /* ProjectViewController.m */; };
 		DA7B36FA1AE273330019AF6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7B36F91AE273330019AF6A /* StoreKit.framework */; };
 		DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */; };
+		DA97578B1AE8E9CE0088F184 /* GKSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		DA7B36F91AE273330019AF6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DA7B36FB1AE287E30019AF6A /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		DA7B36FC1AE287E30019AF6A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		DA9757891AE8E9CE0088F184 /* GKSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSpriteNode.h; sourceTree = "<group>"; };
+		DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSpriteNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +163,6 @@
 				DA7B36F51AE262030019AF6A /* View Controllers */,
 				DA7B36F61AE2620B0019AF6A /* Scenes */,
 				6AD4643117DE8BB800C19E75 /* Main.storyboard */,
-				9213D13C1AE2802F004F2594 /* Projects.plist */,
 				6AD4643C17DE8BB800C19E75 /* Images.xcassets */,
 				6AD4642617DE8BB800C19E75 /* Supporting Files */,
 			);
@@ -171,8 +173,10 @@
 		6AD4642617DE8BB800C19E75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA97578C1AE8E9EE0088F184 /* Categories */,
 				6AD4648617DE988C00C19E75 /* Sound Effects */,
 				6AD4648517DE986400C19E75 /* Sprite Images */,
+				9213D13C1AE2802F004F2594 /* Projects.plist */,
 				6AD4642717DE8BB800C19E75 /* SKInvaders-Info.plist */,
 				6AD4642817DE8BB800C19E75 /* InfoPlist.strings */,
 				6AD4642B17DE8BB800C19E75 /* main.m */,
@@ -245,6 +249,15 @@
 				6A4B80E717E02A45002A234F /* GameOverScene.m */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		DA97578C1AE8E9EE0088F184 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DA9757891AE8E9CE0088F184 /* GKSpriteNode.h */,
+				DA97578A1AE8E9CE0088F184 /* GKSpriteNode.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +369,7 @@
 				DA7B36FD1AE287E30019AF6A /* PersonalViewController.m in Sources */,
 				6AD4643917DE8BB800C19E75 /* GameScene.m in Sources */,
 				6AD4643617DE8BB800C19E75 /* GameViewController.m in Sources */,
+				DA97578B1AE8E9CE0088F184 /* GKSpriteNode.m in Sources */,
 				6AD4643017DE8BB800C19E75 /* AppDelegate.m in Sources */,
 				DA7B36F41AE261FA0019AF6A /* ProjectViewController.m in Sources */,
 				6AD4642C17DE8BB800C19E75 /* main.m in Sources */,

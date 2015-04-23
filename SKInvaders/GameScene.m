@@ -38,12 +38,13 @@ static const u_int32_t kShipCategory               = 0x1 << 2;
 static const u_int32_t kSceneEdgeCategory          = 0x1 << 3;
 static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
 
-//2
 #define kInvaderSize CGSizeMake(24, 16)
 #define kInvaderGridSpacing CGSizeMake(12, 12)
 #define kInvaderRowCount 3
 #define kInvaderColCount 3
-//3
+
+#define kProjectPlistPath [[NSBundle mainBundle] pathForResource:@"Projects" ofType:@"plist"]
+#define kAppIdDict [NSDictionary dictionaryWithContentsOfFile:kProjectPlistPath]
 #define kInvaderName @"invader"
 #define kShipSize CGSizeMake(30, 16)
 #define kShipName @"ship"
@@ -108,31 +109,19 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     [self setupHud];
 }
 
-- (NSArray *)loadInvaderTexturesOfType:(InvaderType)invaderType {
-    NSString *prefix;
-    switch (invaderType) {
-        case InvaderTypeApp:
-            prefix = @"";
-            break;
-            
-        case InvaderTypePersonal:
-            prefix = @"";
-            break;
-            
-        case InvaderTypeInternship:
-        default:
-            prefix = @"";
-            break;
-    }
-    //1
+- (NSArray *)loadInvaderTexturesForAppID:(NSString*)appID {
     return @[[SKTexture textureWithImageNamed:@"WhatToPack"]];
 }
  
-- (SKNode *)makeInvaderOfType:(InvaderType)invaderType {
-    NSArray *invaderTextures = [self loadInvaderTexturesOfType:invaderType];
+- (SKNode *)makeInvaderOfType:(InvaderType)invaderType withIndex:(NSInteger)index {
+    NSString *appID = [[kAppIdDict allKeys] objectAtIndex:index];
+  
+    NSArray *invaderTextures = [self loadInvaderTexturesForAppID:appID];
     //2
     SKSpriteNode *invader = [SKSpriteNode spriteNodeWithTexture:[invaderTextures firstObject]];
     invader.name = kInvaderName;
+    invader.appID = appID;
+  
     //3
     [invader runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:invaderTextures timePerFrame:self.timePerMove]]];
  
@@ -151,9 +140,9 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
     for (NSUInteger row = 0; row < kInvaderRowCount; ++row) {
         //2
         InvaderType invaderType;
-        if (row % 3 == 0)      invaderType = InvaderTypeA;
-        else if (row % 3 == 1) invaderType = InvaderTypeB;
-        else                   invaderType = InvaderTypeC;
+        if (row % 3 == 0)      invaderType = InvaderTypeApp;
+        else if (row % 3 == 1) invaderType = InvaderTypePersonal;
+        else                   invaderType = InvaderTypeInternship;
  
         //3
         CGPoint invaderPosition = CGPointMake(baseOrigin.x, row * (kInvaderGridSpacing.height + kInvaderSize.height) + baseOrigin.y);
@@ -161,7 +150,7 @@ static const u_int32_t kInvaderFiredBulletCategory = 0x1 << 4;
         //4
         for (NSUInteger col = 0; col < kInvaderColCount; ++col) {
             //5
-            SKNode *invader = [self makeInvaderOfType:invaderType];
+            SKNode *invader = [self makeInvaderOfType:invaderType withIndex:row+col];
             invader.position = invaderPosition;
             [self addChild:invader];
             //6

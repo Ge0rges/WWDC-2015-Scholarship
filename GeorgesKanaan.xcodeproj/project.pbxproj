@@ -24,8 +24,6 @@
 		6AD4644617DE8BB900C19E75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD4642117DE8BB800C19E75 /* UIKit.framework */; };
 		6AD4644E17DE8BB900C19E75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4644C17DE8BB900C19E75 /* InfoPlist.strings */; };
 		6AD4645017DE8BB900C19E75 /* SKInvadersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4644F17DE8BB900C19E75 /* SKInvadersTests.m */; };
-		6AD4647617DE8E9D00C19E75 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4646617DE8E9C00C19E75 /* Ship.png */; };
-		6AD4647717DE8E9D00C19E75 /* Ship@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4646717DE8E9C00C19E75 /* Ship@2x.png */; };
 		6AD4647A17DE8F2600C19E75 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD4647917DE8F2600C19E75 /* CoreMotion.framework */; };
 		6AD4647F17DE965A00C19E75 /* InvaderBullet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647B17DE965A00C19E75 /* InvaderBullet.wav */; };
 		6AD4648017DE965A00C19E75 /* InvaderHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4647C17DE965A00C19E75 /* InvaderHit.wav */; };
@@ -75,8 +73,6 @@
 		6AD4644B17DE8BB900C19E75 /* SKInvadersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKInvadersTests-Info.plist"; sourceTree = "<group>"; };
 		6AD4644D17DE8BB900C19E75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6AD4644F17DE8BB900C19E75 /* SKInvadersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKInvadersTests.m; sourceTree = "<group>"; };
-		6AD4646617DE8E9C00C19E75 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
-		6AD4646717DE8E9C00C19E75 /* Ship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ship@2x.png"; sourceTree = "<group>"; };
 		6AD4647917DE8F2600C19E75 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6AD4647B17DE965A00C19E75 /* InvaderBullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = InvaderBullet.wav; sourceTree = "<group>"; };
 		6AD4647C17DE965A00C19E75 /* InvaderHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = InvaderHit.wav; sourceTree = "<group>"; };
@@ -208,8 +204,6 @@
 		6AD4648517DE986400C19E75 /* Sprite Images */ = {
 			isa = PBXGroup;
 			children = (
-				6AD4646617DE8E9C00C19E75 /* Ship.png */,
-				6AD4646717DE8E9C00C19E75 /* Ship@2x.png */,
 			);
 			name = "Sprite Images";
 			sourceTree = "<group>";
@@ -342,9 +336,7 @@
 				6AD4647F17DE965A00C19E75 /* InvaderBullet.wav in Resources */,
 				6AD4648117DE965A00C19E75 /* ShipBullet.wav in Resources */,
 				6AD4648217DE965A00C19E75 /* ShipHit.wav in Resources */,
-				6AD4647717DE8E9D00C19E75 /* Ship@2x.png in Resources */,
 				6AD4648417DE96B100C19E75 /* AssetLicensingNotes.txt in Resources */,
-				6AD4647617DE8E9D00C19E75 /* Ship.png in Resources */,
 				6AD4643317DE8BB800C19E75 /* Main.storyboard in Resources */,
 				9213D13D1AE2802F004F2594 /* Projects.plist in Resources */,
 			);

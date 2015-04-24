@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OAH-pv-WTV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OAH-pv-WTV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -211,35 +209,23 @@ I’m an iOS developer who has developed multiple apps for the App store and twe
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="done"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkV-hd-zmw">
-                                <rect key="frame" x="124" y="80" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkV-hd-zmw">
+                                <rect key="frame" x="138" y="80" width="45" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="DrH-VZ-zOZ"/>
-                                    <constraint firstAttribute="height" constant="40" id="jOI-sy-5GJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="QlL-m5-yvn"/>
+                                    <constraint firstAttribute="width" constant="45" id="Wdd-sw-8GD"/>
                                 </constraints>
-                                <state key="normal" title="T">
+                                <state key="normal" image="Twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="openTwitter:" destination="751-pz-612" eventType="touchUpInside" id="NR5-dO-i9C"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GP7-PD-LYD">
-                                <rect key="frame" x="175" y="80" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="ab9-Qd-tsD"/>
-                                </constraints>
-                                <state key="normal" title="G">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openGithub:" destination="751-pz-612" eventType="touchUpInside" id="I1M-eY-d7K"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGJ-uP-90b">
                                 <rect key="frame" x="124" y="20" width="124" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="jIr-Wt-2Ki"/>
+                                    <constraint firstAttribute="height" constant="25" id="mht-6d-ejc"/>
                                 </constraints>
                                 <state key="normal" title="Georges Kanaan">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -254,29 +240,38 @@ I’m an iOS developer who has developed multiple apps for the App store and twe
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcK-xI-hlq">
+                                <rect key="frame" x="203" y="80" width="45" height="40"/>
+                                <state key="normal" image="Github">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openTwitter:" destination="751-pz-612" eventType="touchUpInside" id="5yJ-WV-OUf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.64023780264868368" green="0.0038774448351548154" blue="0.064444029706934094" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Qn-VB-ve6" firstAttribute="top" secondItem="ZGJ-uP-90b" secondAttribute="top" id="1lk-DL-1NC"/>
-                            <constraint firstItem="IkV-hd-zmw" firstAttribute="baseline" secondItem="GP7-PD-LYD" secondAttribute="firstBaseline" id="4b2-J0-lgR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZGJ-uP-90b" secondAttribute="trailing" constant="56" id="AZ5-ZX-l7h"/>
-                            <constraint firstItem="GP7-PD-LYD" firstAttribute="leading" secondItem="IkV-hd-zmw" secondAttribute="trailing" constant="11" id="BwY-ea-51p"/>
-                            <constraint firstAttribute="bottom" secondItem="Ujo-bh-hSp" secondAttribute="bottom" constant="20" symbolic="YES" id="CCd-Ui-Ob0"/>
-                            <constraint firstItem="0Qn-VB-ve6" firstAttribute="leading" secondItem="cBs-mZ-7UC" secondAttribute="leadingMargin" id="FWI-0f-6VW"/>
-                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="top" secondItem="IkV-hd-zmw" secondAttribute="bottom" constant="8" symbolic="YES" id="JbA-H8-4bB"/>
-                            <constraint firstItem="PPv-d7-3c6" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="trailing" constant="22" id="M6P-dP-PeO"/>
-                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="leading" id="MhC-eB-nhe"/>
-                            <constraint firstItem="ZGJ-uP-90b" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="trailing" constant="8" symbolic="YES" id="PSO-bS-y71"/>
-                            <constraint firstItem="PPv-d7-3c6" firstAttribute="top" secondItem="ZGJ-uP-90b" secondAttribute="bottom" constant="8" symbolic="YES" id="RRc-lz-kB2"/>
-                            <constraint firstItem="GP7-PD-LYD" firstAttribute="top" secondItem="IkV-hd-zmw" secondAttribute="top" id="TqV-Ku-R2B"/>
-                            <constraint firstItem="PPv-d7-3c6" firstAttribute="centerX" secondItem="ZGJ-uP-90b" secondAttribute="centerX" id="dO6-x7-3MG"/>
-                            <constraint firstItem="GP7-PD-LYD" firstAttribute="baseline" secondItem="IkV-hd-zmw" secondAttribute="firstBaseline" id="fKa-RM-2eJ"/>
-                            <constraint firstItem="0Qn-VB-ve6" firstAttribute="top" secondItem="O5c-ax-3bB" secondAttribute="bottom" id="gc7-I4-TcA"/>
-                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="trailing" secondItem="cBs-mZ-7UC" secondAttribute="trailingMargin" id="hEO-fD-NRD"/>
-                            <constraint firstItem="IkV-hd-zmw" firstAttribute="top" secondItem="PPv-d7-3c6" secondAttribute="bottom" constant="6" id="tYQ-td-V6U"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GP7-PD-LYD" secondAttribute="trailing" constant="89" id="vvw-qy-l6e"/>
-                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="top" secondItem="0Qn-VB-ve6" secondAttribute="bottom" constant="8" symbolic="YES" id="wxq-i6-AbO"/>
-                            <constraint firstItem="ZGJ-uP-90b" firstAttribute="leading" secondItem="IkV-hd-zmw" secondAttribute="leading" id="z8f-4Q-nXM"/>
+                            <constraint firstItem="ZGJ-uP-90b" firstAttribute="top" secondItem="O5c-ax-3bB" secondAttribute="bottom" id="1Fk-3N-mgG"/>
+                            <constraint firstItem="ZGJ-uP-90b" firstAttribute="top" secondItem="0Qn-VB-ve6" secondAttribute="top" id="4SL-Wb-Uat"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="top" secondItem="RcK-xI-hlq" secondAttribute="bottom" constant="8" symbolic="YES" id="6kO-ma-UnT"/>
+                            <constraint firstItem="ZGJ-uP-90b" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="trailing" constant="8" symbolic="YES" id="BMP-jf-Wm0"/>
+                            <constraint firstItem="PPv-d7-3c6" firstAttribute="centerX" secondItem="ZGJ-uP-90b" secondAttribute="centerX" id="Efg-Uh-WHB"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="leading" id="GOj-Kg-2Ps"/>
+                            <constraint firstItem="PPv-d7-3c6" firstAttribute="leading" secondItem="0Qn-VB-ve6" secondAttribute="trailing" constant="22" id="WYb-7y-6U4"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="centerX" secondItem="IkV-hd-zmw" secondAttribute="centerX" id="YSZ-Af-OTc"/>
+                            <constraint firstItem="RcK-xI-hlq" firstAttribute="trailing" secondItem="ZGJ-uP-90b" secondAttribute="trailing" id="cXh-Dd-5JA"/>
+                            <constraint firstItem="PPv-d7-3c6" firstAttribute="top" secondItem="ZGJ-uP-90b" secondAttribute="bottom" constant="8" symbolic="YES" id="coe-Yy-Vx9"/>
+                            <constraint firstItem="RcK-xI-hlq" firstAttribute="leading" secondItem="IkV-hd-zmw" secondAttribute="trailing" constant="20" id="dxH-xr-wiq"/>
+                            <constraint firstItem="IkV-hd-zmw" firstAttribute="top" secondItem="PPv-d7-3c6" secondAttribute="bottom" constant="6" id="f3N-qM-VgK"/>
+                            <constraint firstAttribute="bottom" secondItem="Ujo-bh-hSp" secondAttribute="bottom" constant="20" symbolic="YES" id="gbD-I6-gNT"/>
+                            <constraint firstItem="PPv-d7-3c6" firstAttribute="leading" secondItem="IkV-hd-zmw" secondAttribute="leading" id="nbe-EL-j0M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZGJ-uP-90b" secondAttribute="trailing" constant="56" id="p3B-r0-lzn"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="trailing" secondItem="cBs-mZ-7UC" secondAttribute="trailingMargin" id="phZ-c3-25j"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="top" secondItem="0Qn-VB-ve6" secondAttribute="bottom" constant="8" symbolic="YES" id="udW-fF-Agl"/>
+                            <constraint firstItem="0Qn-VB-ve6" firstAttribute="leading" secondItem="cBs-mZ-7UC" secondAttribute="leadingMargin" id="wIp-qq-Ojw"/>
+                            <constraint firstItem="Ujo-bh-hSp" firstAttribute="top" secondItem="IkV-hd-zmw" secondAttribute="bottom" constant="8" symbolic="YES" id="xou-Sr-a4X"/>
+                            <constraint firstItem="IkV-hd-zmw" firstAttribute="top" secondItem="RcK-xI-hlq" secondAttribute="top" id="y9T-dP-guP"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -296,6 +291,8 @@ I’m an iOS developer who has developed multiple apps for the App store and twe
     </scenes>
     <resources>
         <image name="Ge0rges" width="92" height="92"/>
+        <image name="Github" width="32" height="32"/>
+        <image name="Twitter" width="569" height="463"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>

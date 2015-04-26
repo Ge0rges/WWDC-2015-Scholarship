@@ -19,7 +19,7 @@
 		DA5FBF101AED32B50081E3D1 /* DreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */; };
 		DA5FBF131AED39EC0081E3D1 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */; };
 		DA5FBF151AED3B940081E3D1 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5FBF141AED3B940081E3D1 /* Projects.plist */; };
-		DAE9D8E51AED474A00B56FDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE9D8E41AED474A00B56FDD /* StoreKit.framework */; };
+		DA6980781AED63C2004B05D8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6980771AED63C2004B05D8 /* StoreKit.framework */; };
 		DAE9D8E81AED4F5A00B56FDD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 		DA5FBF111AED39EC0081E3D1 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
 		DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		DA5FBF141AED3B940081E3D1 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
-		DAE9D8E41AED474A00B56FDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DA6980771AED63C2004B05D8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE9D8E51AED474A00B56FDD /* StoreKit.framework in Frameworks */,
+				DA6980781AED63C2004B05D8 /* StoreKit.framework in Frameworks */,
 				DA25CC571AECD5D700593A8D /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +156,7 @@
 		DAE9D8E61AED475500B56FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DAE9D8E41AED474A00B56FDD /* StoreKit.framework */,
+				DA6980771AED63C2004B05D8 /* StoreKit.framework */,
 				DA25CC561AECD5D700593A8D /* CoreMotion.framework */,
 			);
 			name = Frameworks;
@@ -211,6 +211,11 @@
 					DA5062681AECBAFD00E8FD53 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 7DTJP5N92F;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					DA5062811AECBAFD00E8FD53 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -394,6 +399,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbda2a95-83e2-40b8-88cd-29f7e05728a6";
 				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -405,11 +411,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "Georges Kanaan/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f0f46ea3-e2be-4ded-98ef-02bbe58b0f0a";
 				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
 			};
 			name = Release;

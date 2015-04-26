@@ -109,7 +109,7 @@
 
 #pragma mark - Helper Methods
 - (void)populateViewForProjectIndex:(NSInteger)index {
-  [self.projectNumberLabel setText:[NSString stringWithFormat:@"%i", index+1]];
+  [self.projectNumberLabel setText:[NSString stringWithFormat:@"%i", (int)index+1]];
   
   // Get the project dict
   NSArray *projects = [NSArray arrayWithContentsOfFile:kProjectsPath];

@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA25CC571AECD5D700593A8D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA25CC561AECD5D700593A8D /* CoreMotion.framework */; };
+		DA50626F1AECBAFD00E8FD53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50626E1AECBAFD00E8FD53 /* main.m */; };
+		DA5062721AECBAFD00E8FD53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5062711AECBAFD00E8FD53 /* AppDelegate.m */; };
+		DA5062751AECBAFD00E8FD53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5062741AECBAFD00E8FD53 /* ViewController.m */; };
+		DA5062781AECBAFD00E8FD53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5062761AECBAFD00E8FD53 /* Main.storyboard */; };
+		DA50627A1AECBAFD00E8FD53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5062791AECBAFD00E8FD53 /* Images.xcassets */; };
+		DA5062891AECBAFD00E8FD53 /* Georges_KanaanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5062881AECBAFD00E8FD53 /* Georges_KanaanTests.m */; };
+		DA5062951AECC69300E8FD53 /* 8-Bit-Madness.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */; };
+		DA5FBF0D1AED1B670081E3D1 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */; };
+		DA5FBF101AED32B50081E3D1 /* DreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */; };
+		DA5FBF131AED39EC0081E3D1 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */; };
+		DA5FBF151AED3B940081E3D1 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5FBF141AED3B940081E3D1 /* Projects.plist */; };
+		DAE9D8E51AED474A00B56FDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE9D8E41AED474A00B56FDD /* StoreKit.framework */; };
+		DAE9D8E81AED4F5A00B56FDD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA5062831AECBAFD00E8FD53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5062611AECBAFD00E8FD53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5062681AECBAFD00E8FD53;
+			remoteInfo = "Georges Kanaan";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA25CC561AECD5D700593A8D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DA5062691AECBAFD00E8FD53 /* Georges Kanaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Georges Kanaan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA50626D1AECBAFD00E8FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA50626E1AECBAFD00E8FD53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA5062701AECBAFD00E8FD53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA5062711AECBAFD00E8FD53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA5062731AECBAFD00E8FD53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DA5062741AECBAFD00E8FD53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA5062771AECBAFD00E8FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA5062791AECBAFD00E8FD53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA5062821AECBAFD00E8FD53 /* Georges KanaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Georges KanaanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5062871AECBAFD00E8FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5062881AECBAFD00E8FD53 /* Georges_KanaanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Georges_KanaanTests.m; sourceTree = "<group>"; };
+		DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-Bit-Madness.ttf"; sourceTree = "<group>"; };
+		DA5FBF0B1AED1B670081E3D1 /* Georges Kanaan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Georges Kanaan-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamsViewController.swift; sourceTree = "<group>"; };
+		DA5FBF111AED39EC0081E3D1 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
+		DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
+		DA5FBF141AED3B940081E3D1 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
+		DAE9D8E41AED474A00B56FDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA5062661AECBAFD00E8FD53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE9D8E51AED474A00B56FDD /* StoreKit.framework in Frameworks */,
+				DA25CC571AECD5D700593A8D /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA50627F1AECBAFD00E8FD53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA5062601AECBAFD00E8FD53 = {
+			isa = PBXGroup;
+			children = (
+				DA50626B1AECBAFD00E8FD53 /* Georges Kanaan */,
+				DA5062851AECBAFD00E8FD53 /* Georges KanaanTests */,
+				DA50626A1AECBAFD00E8FD53 /* Products */,
+				DAE9D8E61AED475500B56FDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA50626A1AECBAFD00E8FD53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062691AECBAFD00E8FD53 /* Georges Kanaan.app */,
+				DA5062821AECBAFD00E8FD53 /* Georges KanaanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA50626B1AECBAFD00E8FD53 /* Georges Kanaan */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062701AECBAFD00E8FD53 /* AppDelegate.h */,
+				DA5062711AECBAFD00E8FD53 /* AppDelegate.m */,
+				DA5FBF0E1AED22210081E3D1 /* View Controllers */,
+				DA5062761AECBAFD00E8FD53 /* Main.storyboard */,
+				DA5062791AECBAFD00E8FD53 /* Images.xcassets */,
+				DA50626C1AECBAFD00E8FD53 /* Supporting Files */,
+			);
+			path = "Georges Kanaan";
+			sourceTree = "<group>";
+		};
+		DA50626C1AECBAFD00E8FD53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */,
+				DA5FBF141AED3B940081E3D1 /* Projects.plist */,
+				DA50626D1AECBAFD00E8FD53 /* Info.plist */,
+				DA50626E1AECBAFD00E8FD53 /* main.m */,
+				DA5FBF0B1AED1B670081E3D1 /* Georges Kanaan-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA5062851AECBAFD00E8FD53 /* Georges KanaanTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062881AECBAFD00E8FD53 /* Georges_KanaanTests.m */,
+				DA5062861AECBAFD00E8FD53 /* Supporting Files */,
+			);
+			path = "Georges KanaanTests";
+			sourceTree = "<group>";
+		};
+		DA5062861AECBAFD00E8FD53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062871AECBAFD00E8FD53 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA5FBF0E1AED22210081E3D1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA5062731AECBAFD00E8FD53 /* ViewController.h */,
+				DA5062741AECBAFD00E8FD53 /* ViewController.m */,
+				DA5FBF111AED39EC0081E3D1 /* ProjectsViewController.h */,
+				DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */,
+				DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */,
+				DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */,
+				DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DAE9D8E61AED475500B56FDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAE9D8E41AED474A00B56FDD /* StoreKit.framework */,
+				DA25CC561AECD5D700593A8D /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA5062681AECBAFD00E8FD53 /* Georges Kanaan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA50628C1AECBAFD00E8FD53 /* Build configuration list for PBXNativeTarget "Georges Kanaan" */;
+			buildPhases = (
+				DA5062651AECBAFD00E8FD53 /* Sources */,
+				DA5062661AECBAFD00E8FD53 /* Frameworks */,
+				DA5062671AECBAFD00E8FD53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Georges Kanaan";
+			productName = "Georges Kanaan";
+			productReference = DA5062691AECBAFD00E8FD53 /* Georges Kanaan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA5062811AECBAFD00E8FD53 /* Georges KanaanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA50628F1AECBAFD00E8FD53 /* Build configuration list for PBXNativeTarget "Georges KanaanTests" */;
+			buildPhases = (
+				DA50627E1AECBAFD00E8FD53 /* Sources */,
+				DA50627F1AECBAFD00E8FD53 /* Frameworks */,
+				DA5062801AECBAFD00E8FD53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA5062841AECBAFD00E8FD53 /* PBXTargetDependency */,
+			);
+			name = "Georges KanaanTests";
+			productName = "Georges KanaanTests";
+			productReference = DA5062821AECBAFD00E8FD53 /* Georges KanaanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA5062611AECBAFD00E8FD53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				TargetAttributes = {
+					DA5062681AECBAFD00E8FD53 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7DTJP5N92F;
+					};
+					DA5062811AECBAFD00E8FD53 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DA5062681AECBAFD00E8FD53;
+					};
+				};
+			};
+			buildConfigurationList = DA5062641AECBAFD00E8FD53 /* Build configuration list for PBXProject "Georges Kanaan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA5062601AECBAFD00E8FD53;
+			productRefGroup = DA50626A1AECBAFD00E8FD53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA5062681AECBAFD00E8FD53 /* Georges Kanaan */,
+				DA5062811AECBAFD00E8FD53 /* Georges KanaanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA5062671AECBAFD00E8FD53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5062781AECBAFD00E8FD53 /* Main.storyboard in Resources */,
+				DA5062951AECC69300E8FD53 /* 8-Bit-Madness.ttf in Resources */,
+				DA5FBF151AED3B940081E3D1 /* Projects.plist in Resources */,
+				DA50627A1AECBAFD00E8FD53 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5062801AECBAFD00E8FD53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA5062651AECBAFD00E8FD53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5062751AECBAFD00E8FD53 /* ViewController.m in Sources */,
+				DA5FBF101AED32B50081E3D1 /* DreamsViewController.swift in Sources */,
+				DA5062721AECBAFD00E8FD53 /* AppDelegate.m in Sources */,
+				DA5FBF0D1AED1B670081E3D1 /* PersonalViewController.swift in Sources */,
+				DAE9D8E81AED4F5A00B56FDD /* WebViewController.swift in Sources */,
+				DA5FBF131AED39EC0081E3D1 /* ProjectsViewController.m in Sources */,
+				DA50626F1AECBAFD00E8FD53 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA50627E1AECBAFD00E8FD53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5062891AECBAFD00E8FD53 /* Georges_KanaanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA5062841AECBAFD00E8FD53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5062681AECBAFD00E8FD53 /* Georges Kanaan */;
+			targetProxy = DA5062831AECBAFD00E8FD53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA5062761AECBAFD00E8FD53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5062771AECBAFD00E8FD53 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA50628A1AECBAFD00E8FD53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA50628B1AECBAFD00E8FD53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA50628D1AECBAFD00E8FD53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Georges Kanaan/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA50628E1AECBAFD00E8FD53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Georges Kanaan/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		DA5062901AECBAFD00E8FD53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Georges KanaanTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Georges Kanaan.app/Georges Kanaan";
+			};
+			name = Debug;
+		};
+		DA5062911AECBAFD00E8FD53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Georges KanaanTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Georges Kanaan.app/Georges Kanaan";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA5062641AECBAFD00E8FD53 /* Build configuration list for PBXProject "Georges Kanaan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA50628A1AECBAFD00E8FD53 /* Debug */,
+				DA50628B1AECBAFD00E8FD53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA50628C1AECBAFD00E8FD53 /* Build configuration list for PBXNativeTarget "Georges Kanaan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA50628D1AECBAFD00E8FD53 /* Debug */,
+				DA50628E1AECBAFD00E8FD53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA50628F1AECBAFD00E8FD53 /* Build configuration list for PBXNativeTarget "Georges KanaanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5062901AECBAFD00E8FD53 /* Debug */,
+				DA5062911AECBAFD00E8FD53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA5062611AECBAFD00E8FD53 /* Project object */;
+}

@@ -3,25 +3,25 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ge0rges.png",
+      "filename" : "App icon.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ge0rges-1.png",
+      "filename" : "App icon-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ge0rges-2.png",
+      "filename" : "App icon-2.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ge0rges-3.png",
+      "filename" : "App icon-3.png",
       "scale" : "3x"
     }
   ],

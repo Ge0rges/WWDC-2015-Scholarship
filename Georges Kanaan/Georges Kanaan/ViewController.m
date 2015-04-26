@@ -65,6 +65,9 @@
   [super viewWillAppear:animated];
   // Customize UI
   
+  // Enable the personal button
+  [self.personalButton setEnabled:YES];
+
   // Start animating the cloud and heart
   shouldStopAnimations = NO;
   [self animateCloudAndHeartUp:YES];
@@ -80,6 +83,9 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
+  
+  // Disable the personal button
+  [self.personalButton setEnabled:NO];
   
   // Make sure the bulelt is nil
   [bulletImageView removeFromSuperview];

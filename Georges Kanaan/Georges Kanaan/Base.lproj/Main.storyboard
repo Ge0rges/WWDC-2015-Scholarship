@@ -142,14 +142,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAU-NE-3DM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAU-NE-3DM">
                                 <rect key="frame" x="16" y="278" width="288" height="227"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">My name is Georges Kanaan people call me Gio, on the internet I am @Ge0rges. At the time of writing I'm a 15 years old, Lebanese, French and american computer enthusiast
-
-I'm an iOS Developer who has developed multiple published apps and tweaks. To check out my projects shoot the heart on the main screen.</string>
+                                <string key="text">My name is Georges Kanaan people call me Gio, on the internet I am @Ge0rges. At the time of writing I'm a 15 years old, Lebanese, French and american computer enthusiast I'm an iOS Developer who has developed multiple published apps and tweaks. To check out my projects shoot the heart on the main screen.</string>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
@@ -203,12 +201,12 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-Fo-V7h">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-Fo-V7h">
                                 <rect key="frame" x="16" y="167" width="288" height="338"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">I’ve been watching WWDC for the past 5 years online. I always wanted to go there, I always wanted to feel part of a bigger picture. I look at WWDC as a chance for me to become a better engineer, hence, a better me. I do want to change the world, in fact, I want to code the change I want to see in the world (Giotma Ghandi). But first, I need to surround myself by the great smart people who can push me all the way up, which is why I always wanted to attend the conference. I’m so excited to be one the first people to build for the next iOS and being at there would definitly make that way easier. Besides, who doesn’t want a #selfie with Tim Cook?</string>
+                                <mutableString key="text">I’ve been watching WWDC for the past 5 years online. I always wanted to go there, I always wanted to feel part of a community. I look at WWDC as a chance for me to become a better engineer, hence, a better me. I do want to change the world, I want to code the change I want to see in the world (Giotma Ghandi). But first, I need to surround myself by the great smart people who can push me all the way up, which is why I always wanted to attend the conference. I’m so excited to be one the first people to build for the next iOS and being at there would definitly make that way easier. Besides, who doesn’t want a #selfie with Tim Cook?</mutableString>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
@@ -297,7 +295,7 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM1-S4-T0R">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM1-S4-T0R">
                                 <rect key="frame" x="16" y="170" width="288" height="335"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Hey, having no life sometimes pays off. Now I’m 15, and I’m a software engineer intern at a fast-growing startup called Saily, the location based secondhand marketplace to buy &amp; sell with neighbors.</string>
@@ -309,7 +307,7 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAILY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-QG-VIe">
                                 <rect key="frame" x="27" y="45" width="266" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0hH-Fd-CNs"/>
+                                    <constraint firstAttribute="height" constant="50" id="xmr-BK-0k3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -318,8 +316,8 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-P1-CBG">
                                 <rect key="frame" x="16" y="8" width="25" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="T9g-Fa-tAw"/>
-                                    <constraint firstAttribute="width" constant="25" id="ZyQ-Py-Nbs"/>
+                                    <constraint firstAttribute="width" constant="25" id="KMl-he-ttf"/>
+                                    <constraint firstAttribute="height" constant="29" id="PMA-kd-fPN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -346,43 +344,39 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCD-tP-unh">
                                 <rect key="frame" x="150" y="520" width="21" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtY-ai-abu">
-                                <rect key="frame" x="80" y="112" width="161" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JcH-7N-idd"/>
+                                    <constraint firstAttribute="width" constant="21" id="Sv7-Wb-BCG"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="AppStore">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </view>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppStore" translatesAutoresizingMaskIntoConstraints="NO" id="TQe-RG-Nuz">
+                                <rect key="frame" x="80" y="112" width="161" height="50"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="launchURL:" destination="8gZ-wz-HC7" eventType="touchUpInside" id="b4h-sj-If9"/>
+                                    <outletCollection property="gestureRecognizers" destination="D72-ae-nxK" appends="YES" id="Ybw-XZ-BK9"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.80000000000000004" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cdv-gk-V6g" firstAttribute="leading" secondItem="MCD-tP-unh" secondAttribute="trailing" constant="8" symbolic="YES" id="181-w0-gI8"/>
-                            <constraint firstItem="jaG-P1-CBG" firstAttribute="leading" secondItem="SCR-u6-Xfj" secondAttribute="leadingMargin" id="6oB-95-4N3"/>
-                            <constraint firstItem="MCD-tP-unh" firstAttribute="leading" secondItem="oZh-ig-TF2" secondAttribute="trailing" constant="8" symbolic="YES" id="B4e-8R-4VD"/>
-                            <constraint firstAttribute="bottom" secondItem="oZh-ig-TF2" secondAttribute="bottom" constant="20" symbolic="YES" id="DYs-fj-1Kq"/>
-                            <constraint firstItem="EEf-QG-VIe" firstAttribute="top" secondItem="jaG-P1-CBG" secondAttribute="bottom" constant="8" symbolic="YES" id="LIN-vb-C2c"/>
-                            <constraint firstItem="DtY-ai-abu" firstAttribute="centerX" secondItem="aM1-S4-T0R" secondAttribute="centerX" id="Ltm-vN-GJr"/>
-                            <constraint firstItem="aM1-S4-T0R" firstAttribute="trailing" secondItem="SCR-u6-Xfj" secondAttribute="trailingMargin" id="Pzv-Bh-BAa"/>
-                            <constraint firstItem="jaG-P1-CBG" firstAttribute="top" secondItem="PZ5-kj-7nh" secondAttribute="bottom" constant="8" symbolic="YES" id="RcJ-Mi-6kV"/>
-                            <constraint firstItem="oZh-ig-TF2" firstAttribute="top" secondItem="cdv-gk-V6g" secondAttribute="top" id="XRI-ew-cUR"/>
-                            <constraint firstItem="qDC-vQ-mQA" firstAttribute="top" secondItem="MCD-tP-unh" secondAttribute="bottom" constant="26" id="aiO-Cn-cnR"/>
-                            <constraint firstItem="EEf-QG-VIe" firstAttribute="leading" secondItem="SCR-u6-Xfj" secondAttribute="leadingMargin" constant="11" id="cey-Xu-EKy"/>
-                            <constraint firstItem="DtY-ai-abu" firstAttribute="centerX" secondItem="EEf-QG-VIe" secondAttribute="centerX" id="dsA-Ue-3Ib"/>
-                            <constraint firstItem="aM1-S4-T0R" firstAttribute="centerX" secondItem="MCD-tP-unh" secondAttribute="centerX" constant="-0.5" id="eEQ-23-uIo"/>
-                            <constraint firstItem="jaG-P1-CBG" firstAttribute="leading" secondItem="aM1-S4-T0R" secondAttribute="leading" id="eLt-Z1-jPg"/>
-                            <constraint firstItem="DtY-ai-abu" firstAttribute="top" secondItem="EEf-QG-VIe" secondAttribute="bottom" constant="17" id="euJ-2V-y2d"/>
-                            <constraint firstAttribute="centerX" secondItem="MCD-tP-unh" secondAttribute="centerX" constant="-0.5" id="hhv-hi-Wov"/>
-                            <constraint firstItem="MCD-tP-unh" firstAttribute="top" secondItem="aM1-S4-T0R" secondAttribute="bottom" constant="15" id="nBb-oe-ii9"/>
-                            <constraint firstItem="oZh-ig-TF2" firstAttribute="top" secondItem="aM1-S4-T0R" secondAttribute="bottom" constant="8" symbolic="YES" id="pgs-3V-xYG"/>
-                            <constraint firstItem="oZh-ig-TF2" firstAttribute="leading" secondItem="SCR-u6-Xfj" secondAttribute="leadingMargin" constant="38" id="qL8-Pt-EdM"/>
-                            <constraint firstItem="aM1-S4-T0R" firstAttribute="top" secondItem="DtY-ai-abu" secondAttribute="bottom" constant="8" symbolic="YES" id="zoV-h1-hZX"/>
+                            <constraint firstItem="EEf-QG-VIe" firstAttribute="top" secondItem="jaG-P1-CBG" secondAttribute="bottom" constant="8" symbolic="YES" id="2bB-HP-hm8"/>
+                            <constraint firstItem="jaG-P1-CBG" firstAttribute="leading" secondItem="SCR-u6-Xfj" secondAttribute="leadingMargin" id="4rZ-EQ-YBt"/>
+                            <constraint firstItem="cdv-gk-V6g" firstAttribute="top" secondItem="oZh-ig-TF2" secondAttribute="top" id="5Tr-WG-3jU"/>
+                            <constraint firstItem="oZh-ig-TF2" firstAttribute="top" secondItem="aM1-S4-T0R" secondAttribute="bottom" constant="8" symbolic="YES" id="Cgz-pm-lEY"/>
+                            <constraint firstItem="jaG-P1-CBG" firstAttribute="leading" secondItem="aM1-S4-T0R" secondAttribute="leading" id="Clu-T5-gZZ"/>
+                            <constraint firstItem="MCD-tP-unh" firstAttribute="top" secondItem="aM1-S4-T0R" secondAttribute="bottom" constant="15" id="Edq-ky-t77"/>
+                            <constraint firstItem="EEf-QG-VIe" firstAttribute="centerX" secondItem="TQe-RG-Nuz" secondAttribute="centerX" id="FIn-YS-xi1"/>
+                            <constraint firstItem="TQe-RG-Nuz" firstAttribute="centerX" secondItem="aM1-S4-T0R" secondAttribute="centerX" id="INq-mZ-SXg"/>
+                            <constraint firstItem="jaG-P1-CBG" firstAttribute="top" secondItem="PZ5-kj-7nh" secondAttribute="bottom" constant="8" symbolic="YES" id="QN0-H5-RtL"/>
+                            <constraint firstItem="MCD-tP-unh" firstAttribute="leading" secondItem="oZh-ig-TF2" secondAttribute="trailing" constant="8" symbolic="YES" id="RM9-mZ-dLp"/>
+                            <constraint firstItem="TQe-RG-Nuz" firstAttribute="top" secondItem="EEf-QG-VIe" secondAttribute="bottom" constant="17" id="Ttu-f0-8sE"/>
+                            <constraint firstAttribute="bottom" secondItem="oZh-ig-TF2" secondAttribute="bottom" constant="20" symbolic="YES" id="Ujq-QY-SkW"/>
+                            <constraint firstItem="aM1-S4-T0R" firstAttribute="top" secondItem="TQe-RG-Nuz" secondAttribute="bottom" constant="8" symbolic="YES" id="dFR-NZ-AVk"/>
+                            <constraint firstItem="EEf-QG-VIe" firstAttribute="leading" secondItem="SCR-u6-Xfj" secondAttribute="leadingMargin" constant="11" id="kB7-nK-E6N"/>
+                            <constraint firstItem="qDC-vQ-mQA" firstAttribute="top" secondItem="MCD-tP-unh" secondAttribute="bottom" constant="26" id="lXR-8P-Dzv"/>
+                            <constraint firstAttribute="centerX" secondItem="MCD-tP-unh" secondAttribute="centerX" constant="-0.5" id="qsA-TG-dzU"/>
+                            <constraint firstItem="cdv-gk-V6g" firstAttribute="leading" secondItem="MCD-tP-unh" secondAttribute="trailing" constant="8" symbolic="YES" id="wuD-Hl-O2K"/>
+                            <constraint firstItem="oZh-ig-TF2" firstAttribute="bottom" secondItem="cdv-gk-V6g" secondAttribute="bottom" id="z92-sa-i3c"/>
+                            <constraint firstItem="aM1-S4-T0R" firstAttribute="centerX" secondItem="MCD-tP-unh" secondAttribute="centerX" constant="-0.5" id="zBt-t9-J79"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aDf-al-nTa"/>
@@ -397,10 +391,15 @@ I'm an iOS Developer who has developed multiple published apps and tweaks. To ch
                         <outlet property="nextButton" destination="cdv-gk-V6g" id="C9h-06-ESh"/>
                         <outlet property="projectNameLabel" destination="EEf-QG-VIe" id="STY-aJ-UfT"/>
                         <outlet property="projectNumberLabel" destination="jaG-P1-CBG" id="NgW-pP-ICj"/>
-                        <outlet property="storeButton" destination="DtY-ai-abu" id="PDW-gw-xXU"/>
+                        <outlet property="storeImageView" destination="TQe-RG-Nuz" id="QwU-Ih-jec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r82-EM-oBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="D72-ae-nxK">
+                    <connections>
+                        <action selector="launchURL:" destination="8gZ-wz-HC7" id="Rgx-qr-qRu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="689" y="1073"/>
         </scene>

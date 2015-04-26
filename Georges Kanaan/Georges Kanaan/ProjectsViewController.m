@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *projectNumberLabel;
 @property (strong, nonatomic) IBOutlet UILabel *projectNameLabel;
 
-@property (strong, nonatomic) IBOutlet UIButton *storeButton;
+@property (strong, nonatomic) IBOutlet UIImageView *storeImageView;
 
 @property (strong, nonatomic) IBOutlet UITextView *descriptiontextView;
 
@@ -47,8 +47,15 @@
 
 #pragma mark - IBActions
 - (IBAction)nextProject:(UIButton *)sender {
+  NSArray *projects = [NSArray arrayWithContentsOfFile:kProjectsPath];
+
   currentProjectIndex += 1;
-  [self populateViewForProjectIndex:currentProjectIndex];
+  
+  if (currentProjectIndex == projects.count) {// Check if this is the last project
+    [self dismissViewControllerAnimated:YES completion:NULL];
+  } else {
+    [self populateViewForProjectIndex:currentProjectIndex];
+  }
 }
 
 - (IBAction)previousProject:(UIButton *)sender {
@@ -120,20 +127,20 @@
   [self.descriptiontextView setText:project[@"description"]];
   
   UIImage *statusImage = [UIImage imageNamed:project[@"status"]];
-  [self.storeButton setBackgroundImage:statusImage forState:UIControlStateNormal];
+  [self.storeImageView setImage:statusImage];
   
   // Check if we should enable the store button
   NSString *url = project[@"url"];
-  [self.storeButton setEnabled:!(!url || [url isEqualToString:@""])];
+  [self.storeImageView setUserInteractionEnabled:!(!url || [url isEqualToString:@""])];
   
   // check if we should round the store button for my logo
   if (index == 0) {
-    self.storeButton.layer.cornerRadius = 7;
-    self.storeButton.layer.masksToBounds = YES;
+    self.storeImageView.layer.cornerRadius = 7;
+    self.storeImageView.layer.masksToBounds = YES;
   
   } else if (index == 1) { // We are possibly coming from a rounded button
-    self.storeButton.layer.cornerRadius = 0.0;
-    self.storeButton.layer.masksToBounds = NO;
+    self.storeImageView.layer.cornerRadius = 0.0;
+    self.storeImageView.layer.masksToBounds = NO;
   }
   
   // Fix the font
@@ -150,9 +157,9 @@
   
   // Check if there is a next project
   if (index+1 == projects.count) {
-    [self.nextButton setHidden:YES];
+    [self.nextButton setBackgroundImage:[UIImage imageNamed:@"Done"] forState:UIControlStateNormal];
   } else {
-    [self.nextButton setHidden:NO];
+    [self.nextButton setBackgroundImage:[UIImage imageNamed:@"Next"] forState:UIControlStateNormal];
   }
 }
 

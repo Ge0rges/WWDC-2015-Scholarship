@@ -160,6 +160,15 @@
     [push setPushDirection:CGVectorMake(0.0, -0.1)];
     
     dispatch_async(dispatch_get_main_queue(), ^{[self.animator addBehavior:push];});
+  
+  } else {
+    // This is a safety in case for some reason the bullet was never removed
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+      if (bulletImageView) {
+        [bulletImageView removeFromSuperview];
+        bulletImageView = nil;
+      }
+    });
   }
 }
 
@@ -168,7 +177,7 @@
     // Remove and stop the time
     [timer invalidate];
     timer = nil;
-
+    
     // Show dreams view
     UIViewController *meVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DreamsVC"];
     [self presentViewController:meVC animated:YES completion:NULL];
@@ -177,7 +186,7 @@
     // Remove and stop the time
     [timer invalidate];
     timer = nil;
-
+    
     // Show Projects view
     UIViewController *meVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectsVC"];
     [self presentViewController:meVC animated:YES completion:NULL];
@@ -186,7 +195,7 @@
     // Remove and stop the time
     [timer invalidate];
     timer = nil;
-
+    
     // Show Personal view
     [self presentAboutMe:nil];
     
@@ -194,7 +203,7 @@
     // Remove and stop the time
     [timer invalidate];
     timer = nil;
-
+    
     // Reset the bullet
     [bulletImageView removeFromSuperview];
     bulletImageView = nil;

@@ -66,6 +66,7 @@
   // Customize UI
   
   // Start animating the cloud and heart
+  shouldStopAnimations = NO;
   [self animateCloudAndHeartUp:YES];
 }
 
@@ -79,6 +80,10 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
+  
+  // Make sure the bulelt is nil
+  [bulletImageView removeFromSuperview];
+  bulletImageView = nil;
   
   // Stop the animations
   [self stopAnimateCloudAndHeart];
@@ -95,13 +100,7 @@
 #pragma mark - IBActions
 - (IBAction)presentAboutMe:(UIButton *)sender {
   UIViewController *meVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PersonalVC"];
-  [self presentViewController:meVC animated:YES completion:^{
-    // Reset the bullet if necessary
-    if (bulletImageView) {
-      [bulletImageView removeFromSuperview];
-      bulletImageView = nil;
-    }
-  }];
+  [self presentViewController:meVC animated:YES completion:NULL];
 }
 
 #pragma mark - Animations
@@ -125,6 +124,8 @@
         [self animateCloudAndHeartUp:YES];//repeat
       }];
     }
+    
+    shouldStopAnimations = NO;
   }
 }
 
@@ -170,11 +171,7 @@
 
     // Show dreams view
     UIViewController *meVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DreamsVC"];
-    [self presentViewController:meVC animated:YES completion:^{
-      // Reset the bullet
-      [bulletImageView removeFromSuperview];
-      bulletImageView = nil;
-    }];
+    [self presentViewController:meVC animated:YES completion:NULL];
     
   } else if (CGRectContainsPoint(_projectsLabel.frame, bulletImageView.center) || CGRectContainsPoint(_projectsImageView.frame, bulletImageView.center)) {
     // Remove and stop the time
@@ -183,11 +180,7 @@
 
     // Show Projects view
     UIViewController *meVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectsVC"];
-    [self presentViewController:meVC animated:YES completion:^{
-      // Reset the bullet
-      [bulletImageView removeFromSuperview];
-      bulletImageView = nil;
-    }];
+    [self presentViewController:meVC animated:YES completion:NULL];
     
   } else if (CGRectContainsPoint(_personalButton.frame, bulletImageView.center)) {
     // Remove and stop the time

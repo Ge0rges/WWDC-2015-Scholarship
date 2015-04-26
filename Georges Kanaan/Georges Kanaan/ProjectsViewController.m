@@ -124,8 +124,17 @@
   
   // Check if we should enable the store button
   NSString *url = project[@"url"];
-  
   [self.storeButton setEnabled:!(!url || [url isEqualToString:@""])];
+  
+  // check if we should round the store button for my logo
+  if (index == 0) {
+    self.storeButton.layer.cornerRadius = 7;
+    self.storeButton.layer.masksToBounds = YES;
+  
+  } else if (index == 1) { // We are possibly coming from a rounded button
+    self.storeButton.layer.cornerRadius = 0.0;
+    self.storeButton.layer.masksToBounds = NO;
+  }
   
   // Fix the font
   [self.descriptiontextView setFont:[UIFont fontWithName:@"8-Bit-Madness" size:30]];// If we don't do this the font resets? -_-

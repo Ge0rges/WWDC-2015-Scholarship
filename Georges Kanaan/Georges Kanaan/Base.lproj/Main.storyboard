@@ -145,7 +145,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAU-NE-3DM">
                                 <rect key="frame" x="16" y="278" width="288" height="227"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">My name is Georges Kanaan people call me Gio, on the internet I am @Ge0rges. At the time of writing I'm a 15 years old, Lebanese, French and american computer enthusiast I'm an iOS Developer who has developed multiple published apps and tweaks. To check out my projects shoot the heart on the main screen.</string>
+                                <string key="text">My name is Georges Kanaan people call me Gio, on the internet I am @Ge0rges. At the time of writing I'm a 15 years old, Lebanese, French and american computer enthusiast. I'm an iOS Developer who has developed multiple published apps and tweaks. To check out my projects shoot the heart on the main screen.</string>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="8-Bit-Madness" family="8-Bit Madness" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -325,7 +325,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdv-gk-V6g">
                                 <rect key="frame" x="179" y="513" width="88" height="35"/>
-                                <state key="normal" image="Next">
+                                <state key="normal" backgroundImage="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

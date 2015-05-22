@@ -7,41 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0ECA2C1B0EEC98006E85D5 /* DreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA2B1B0EEC98006E85D5 /* DreamsViewController.swift */; };
+		DA0ECA2E1B0EECA4006E85D5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA2D1B0EECA4006E85D5 /* PersonalViewController.swift */; };
+		DA0ECA301B0EECAF006E85D5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA2F1B0EECAF006E85D5 /* WebViewController.swift */; };
+		DA0ECA351B0EECCC006E85D5 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA321B0EECCC006E85D5 /* ProjectsViewController.m */; };
+		DA0ECA361B0EECCC006E85D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA341B0EECCC006E85D5 /* ViewController.m */; };
+		DA0ECA391B0EECF8006E85D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA381B0EECF8006E85D5 /* AppDelegate.m */; };
+		DA0ECA3B1B0EED06006E85D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0ECA3A1B0EED06006E85D5 /* main.m */; };
+		DA0ECA3D1B0EED26006E85D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0ECA3C1B0EED26006E85D5 /* Images.xcassets */; };
+		DA0ECA401B0EED35006E85D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0ECA3E1B0EED35006E85D5 /* Main.storyboard */; };
+		DA0ECA431B0EED50006E85D5 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0ECA421B0EED50006E85D5 /* Projects.plist */; };
 		DA25CC571AECD5D700593A8D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA25CC561AECD5D700593A8D /* CoreMotion.framework */; };
-		DA50626F1AECBAFD00E8FD53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50626E1AECBAFD00E8FD53 /* main.m */; };
-		DA5062721AECBAFD00E8FD53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5062711AECBAFD00E8FD53 /* AppDelegate.m */; };
-		DA5062751AECBAFD00E8FD53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5062741AECBAFD00E8FD53 /* ViewController.m */; };
-		DA5062781AECBAFD00E8FD53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5062761AECBAFD00E8FD53 /* Main.storyboard */; };
-		DA50627A1AECBAFD00E8FD53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5062791AECBAFD00E8FD53 /* Images.xcassets */; };
-		DA5062951AECC69300E8FD53 /* 8-Bit-Madness.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */; };
-		DA5FBF0D1AED1B670081E3D1 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */; };
-		DA5FBF101AED32B50081E3D1 /* DreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */; };
-		DA5FBF131AED39EC0081E3D1 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */; };
-		DA5FBF151AED3B940081E3D1 /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5FBF141AED3B940081E3D1 /* Projects.plist */; };
 		DA6980781AED63C2004B05D8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6980771AED63C2004B05D8 /* StoreKit.framework */; };
-		DAE9D8E81AED4F5A00B56FDD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0ECA2B1B0EEC98006E85D5 /* DreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamsViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA0ECA2D1B0EECA4006E85D5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA0ECA2F1B0EECAF006E85D5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = SOURCE_ROOT; };
+		DA0ECA311B0EECCC006E85D5 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = SOURCE_ROOT; };
+		DA0ECA321B0EECCC006E85D5 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = SOURCE_ROOT; };
+		DA0ECA331B0EECCC006E85D5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = SOURCE_ROOT; };
+		DA0ECA341B0EECCC006E85D5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = SOURCE_ROOT; };
+		DA0ECA371B0EECF8006E85D5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		DA0ECA381B0EECF8006E85D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		DA0ECA3A1B0EED06006E85D5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		DA0ECA3C1B0EED26006E85D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		DA0ECA3F1B0EED35006E85D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		DA0ECA411B0EED42006E85D5 /* 8-Bit-Madness.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-Bit-Madness.ttf"; sourceTree = SOURCE_ROOT; };
+		DA0ECA421B0EED50006E85D5 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = SOURCE_ROOT; };
+		DA0ECA461B0EED76006E85D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		DA25CC561AECD5D700593A8D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DA5062691AECBAFD00E8FD53 /* Georges Kanaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Georges Kanaan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA50626D1AECBAFD00E8FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA50626E1AECBAFD00E8FD53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DA5062701AECBAFD00E8FD53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DA5062711AECBAFD00E8FD53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DA5062731AECBAFD00E8FD53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DA5062741AECBAFD00E8FD53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DA5062771AECBAFD00E8FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DA5062791AECBAFD00E8FD53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-Bit-Madness.ttf"; sourceTree = "<group>"; };
-		DA5FBF0B1AED1B670081E3D1 /* Georges Kanaan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Georges Kanaan-Bridging-Header.h"; sourceTree = "<group>"; };
-		DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
-		DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamsViewController.swift; sourceTree = "<group>"; };
-		DA5FBF111AED39EC0081E3D1 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
-		DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
-		DA5FBF141AED3B940081E3D1 /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Projects.plist; sourceTree = "<group>"; };
 		DA6980771AED63C2004B05D8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DA87F06D1B0DAE5500350E2C /* Georges Kanaan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Georges Kanaan-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +76,11 @@
 		DA50626B1AECBAFD00E8FD53 /* Georges Kanaan */ = {
 			isa = PBXGroup;
 			children = (
-				DA5062701AECBAFD00E8FD53 /* AppDelegate.h */,
-				DA5062711AECBAFD00E8FD53 /* AppDelegate.m */,
+				DA0ECA371B0EECF8006E85D5 /* AppDelegate.h */,
+				DA0ECA381B0EECF8006E85D5 /* AppDelegate.m */,
 				DA5FBF0E1AED22210081E3D1 /* View Controllers */,
-				DA5062761AECBAFD00E8FD53 /* Main.storyboard */,
-				DA5062791AECBAFD00E8FD53 /* Images.xcassets */,
+				DA0ECA3E1B0EED35006E85D5 /* Main.storyboard */,
+				DA0ECA3C1B0EED26006E85D5 /* Images.xcassets */,
 				DA50626C1AECBAFD00E8FD53 /* Supporting Files */,
 			);
 			path = "Georges Kanaan";
@@ -90,11 +89,11 @@
 		DA50626C1AECBAFD00E8FD53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DA5062941AECC69300E8FD53 /* 8-Bit-Madness.ttf */,
-				DA5FBF141AED3B940081E3D1 /* Projects.plist */,
-				DA50626D1AECBAFD00E8FD53 /* Info.plist */,
-				DA50626E1AECBAFD00E8FD53 /* main.m */,
-				DA5FBF0B1AED1B670081E3D1 /* Georges Kanaan-Bridging-Header.h */,
+				DA0ECA411B0EED42006E85D5 /* 8-Bit-Madness.ttf */,
+				DA0ECA421B0EED50006E85D5 /* Projects.plist */,
+				DA0ECA461B0EED76006E85D5 /* Info.plist */,
+				DA0ECA3A1B0EED06006E85D5 /* main.m */,
+				DA87F06D1B0DAE5500350E2C /* Georges Kanaan-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -102,13 +101,13 @@
 		DA5FBF0E1AED22210081E3D1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA5062731AECBAFD00E8FD53 /* ViewController.h */,
-				DA5062741AECBAFD00E8FD53 /* ViewController.m */,
-				DA5FBF111AED39EC0081E3D1 /* ProjectsViewController.h */,
-				DA5FBF121AED39EC0081E3D1 /* ProjectsViewController.m */,
-				DA5FBF0F1AED32B50081E3D1 /* DreamsViewController.swift */,
-				DA5FBF0C1AED1B670081E3D1 /* PersonalViewController.swift */,
-				DAE9D8E71AED4F5A00B56FDD /* WebViewController.swift */,
+				DA0ECA311B0EECCC006E85D5 /* ProjectsViewController.h */,
+				DA0ECA321B0EECCC006E85D5 /* ProjectsViewController.m */,
+				DA0ECA331B0EECCC006E85D5 /* ViewController.h */,
+				DA0ECA341B0EECCC006E85D5 /* ViewController.m */,
+				DA0ECA2B1B0EEC98006E85D5 /* DreamsViewController.swift */,
+				DA0ECA2D1B0EECA4006E85D5 /* PersonalViewController.swift */,
+				DA0ECA2F1B0EECAF006E85D5 /* WebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -184,10 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5062781AECBAFD00E8FD53 /* Main.storyboard in Resources */,
-				DA5062951AECC69300E8FD53 /* 8-Bit-Madness.ttf in Resources */,
-				DA5FBF151AED3B940081E3D1 /* Projects.plist in Resources */,
-				DA50627A1AECBAFD00E8FD53 /* Images.xcassets in Resources */,
+				DA0ECA3D1B0EED26006E85D5 /* Images.xcassets in Resources */,
+				DA0ECA401B0EED35006E85D5 /* Main.storyboard in Resources */,
+				DA0ECA431B0EED50006E85D5 /* Projects.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,23 +196,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5062751AECBAFD00E8FD53 /* ViewController.m in Sources */,
-				DA5FBF101AED32B50081E3D1 /* DreamsViewController.swift in Sources */,
-				DA5062721AECBAFD00E8FD53 /* AppDelegate.m in Sources */,
-				DA5FBF0D1AED1B670081E3D1 /* PersonalViewController.swift in Sources */,
-				DAE9D8E81AED4F5A00B56FDD /* WebViewController.swift in Sources */,
-				DA5FBF131AED39EC0081E3D1 /* ProjectsViewController.m in Sources */,
-				DA50626F1AECBAFD00E8FD53 /* main.m in Sources */,
+				DA0ECA361B0EECCC006E85D5 /* ViewController.m in Sources */,
+				DA0ECA2C1B0EEC98006E85D5 /* DreamsViewController.swift in Sources */,
+				DA0ECA301B0EECAF006E85D5 /* WebViewController.swift in Sources */,
+				DA0ECA2E1B0EECA4006E85D5 /* PersonalViewController.swift in Sources */,
+				DA0ECA351B0EECCC006E85D5 /* ProjectsViewController.m in Sources */,
+				DA0ECA3B1B0EED06006E85D5 /* main.m in Sources */,
+				DA0ECA391B0EECF8006E85D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA5062761AECBAFD00E8FD53 /* Main.storyboard */ = {
+		DA0ECA3E1B0EED35006E85D5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA5062771AECBAFD00E8FD53 /* Base */,
+				DA0ECA3F1B0EED35006E85D5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -262,6 +260,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -298,6 +297,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -309,12 +310,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Georges Kanaan/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "dbda2a95-83e2-40b8-88cd-29f7e05728a6";
-				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -326,12 +327,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				INFOPLIST_FILE = "Georges Kanaan/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f0f46ea3-e2be-4ded-98ef-02bbe58b0f0a";
-				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan/Georges Kanaan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Georges Kanaan-Bridging-Header.h";
 			};
 			name = Release;
 		};
